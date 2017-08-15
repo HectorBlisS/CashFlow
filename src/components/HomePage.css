@@ -1,0 +1,14 @@
+.fondo{
+    background-color: red;
+    color: white;
+    animation: girale 2s ease-in-out infinite;
+}
+
+@keyframes girale{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
