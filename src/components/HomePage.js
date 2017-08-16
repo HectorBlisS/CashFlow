@@ -13,20 +13,24 @@ class HomePage extends Component{
     }
     
     changeName = () => {
-        this.setState({hola:"kiubo?"})
+        this.setState({sexo:"kiubo?"})
     }
     
     render(){
-        const {hola} = this.state;
+        const {sexo} = this.state;
         return(
             <h1 className="fondo">
-                Soy la home Page {hola}
+                Soy la home Page {sexo}
 
+            
                 <RaisedButton
                    onClick={this.changeName}
-                    label="Pachurrame"
-                />
+                    label="Pachurrame"/>
+
+                    <h1 className="Button"> </h1>
+                    
             </h1>
+            
         );
     }
 }
