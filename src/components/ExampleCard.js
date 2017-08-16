@@ -3,14 +3,15 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import FlatButton from 'material-ui/FlatButton';
 
 
-class ExampleCard extends Component{
-  render(){
+
+const ExampleCard = () => {
     return(
       <Card style={{margin:"20px"}}>
         <CardHeader
           title="Miguel Rafael González Durón"
           subtitle="Programmer at Fixter.org"
-          avatar="https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/14907044_10210911872496632_8044975656506544532_n.jpg?oh=afe0c1d17680f6b0feeb3c52787c87be&oe=59EC5631"
+        
+        avatar="https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/14907044_10210911872496632_8044975656506544532_n.jpg?oh=afe0c1d17680f6b0feeb3c52787c87be&oe=59EC5631"
         />
         <CardMedia
           overlay={<CardTitle title="Islas Marietas" subtitle="Sin lugar a duda esta isla es interesante, sin embargo, programar en React lo es aún más" />}
@@ -27,7 +28,6 @@ class ExampleCard extends Component{
 
       </Card>
     );
-  }
 }
 
 export default ExampleCard;

@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {BrowserRouter} from 'react-router-dom';
+
 
 const Mui = () => (
 
@@ -13,5 +15,13 @@ const Mui = () => (
 
 );
 
-ReactDOM.render(<Mui/>, document.getElementById('root'));
+const WithRouter = () => (
+    <BrowserRouter>
+        <Mui/>
+    </BrowserRouter>
+);
+
+
+
+ReactDOM.render(<WithRouter/>, document.getElementById('root'));
 registerServiceWorker();
