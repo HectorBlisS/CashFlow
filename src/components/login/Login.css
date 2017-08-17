@@ -1,0 +1,25 @@
+.login-form {
+  /*max-width: 300px;*/
+  position: relative;
+  margin: 70px auto 30px;
+  padding: 50px 40px 25px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #dae1e3;
+  background: #f8fbfd;
+  border-radius: 5px;
+  text-align: left;
+
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+  height: 10%;
+}
+
+.ant-input{
+  font-size: 24px;
+}
