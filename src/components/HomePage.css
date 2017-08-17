@@ -6,6 +6,11 @@
     border: 1px solid #444;
     /*animation: girale 2s ease-in-out infinite;*/
 }
+.Button{
+    
+    flex-direction: flex-end;
+    background-color: red;    
+    }
 
 @keyframes girale{
     0%{

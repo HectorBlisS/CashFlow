@@ -23,13 +23,15 @@ class HomePage extends Component{
           this.setState({hola:"hola"})
         }
 
+
     }
 
     render(){
         const {hola} = this.state;
         return(
             <div>
-              <div className="fondo">
+             <div className="fondo">
+
               <h1 >
                   Soy la Home Page {hola}
               </h1>
@@ -44,6 +46,7 @@ class HomePage extends Component{
 
             <ExampleCard/>
           </div>
+
 
         );
     }
