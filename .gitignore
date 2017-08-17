@@ -18,7 +18,7 @@
 
 # firebase
 firebase.json
-.firebaseserc
+.firebaserc
 database.rules.json
 
 npm-debug.log*

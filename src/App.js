@@ -8,22 +8,22 @@ import {Link, NavLink} from 'react-router-dom';
 
 class App extends Component {
 
-    
+
     
   render() {
     return (
       <div className="App">
-       <NavLink to="/login">
-           <h1>
-               Sustituyeme por el nav
+        <NavLink to="/login">
+          <h1>
+            Sustituyeme por el nav
            </h1>
        </NavLink>
        <NavLink to="/">
            <h1>
-                Volver         
+                Volver
             </h1>
        </NavLink>
-       
+
         <Routes/>
       </div>
     );
