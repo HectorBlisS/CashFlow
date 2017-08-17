@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {RaisedButton} from 'material-ui';
-import ExampleCard from './ExampleCard';
-import FontIcon from 'material-ui/FontIcon';
+//import {RaisedButton} from 'material-ui';
+//import ExampleCard from './ExampleCard';
+//import FontIcon from 'material-ui/FontIcon';
 import Ejemplo from './Ejemplo';
 
 
@@ -36,15 +36,10 @@ class HomePage extends Component{
                   Soy la Home Page {hola}
               </h1>
               <Ejemplo lupe={this.props.history} />
-              <RaisedButton
-                primary={true}
-                style={{margin:"20"}}
-                onClick={this.changeName}
-                label="Pachurrame"
-              />
+
             </div>
 
-            <ExampleCard/>
+
           </div>
 
 
