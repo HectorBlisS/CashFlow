@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {BrowserRouter} from 'react-router-dom';
 
-
+import 'toastr/build/toastr.css';
 
 
 const WithRouter = () => (

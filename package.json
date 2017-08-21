@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "antd": "^2.12.6",
+    "firebase": "^4.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
-    "react-scripts": "1.0.11"
+    "react-scripts": "1.0.11",
+    "toastr": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
