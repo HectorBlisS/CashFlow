@@ -1,13 +1,13 @@
 import * as firebase from 'firebase';
 
 const config = {
-    apiKey: "AIzaSyDlE59HwBaOOnp6jJ475Wm-j4t9izg836c",
-    authDomain: "tallerfixter-f7f34.firebaseapp.com",
-    databaseURL: "https://tallerfixter-f7f34.firebaseio.com",
-    projectId: "tallerfixter-f7f34",
-    storageBucket: "tallerfixter-f7f34.appspot.com",
-    messagingSenderId: "904827933328"
-  };
+  apiKey: "AIzaSyBzD4uPbVH2TQ52fmYrExTrRjbt7_cb9is",
+  authDomain: "cash-b4513.firebaseapp.com",
+  databaseURL: "https://cash-b4513.firebaseio.com",
+  projectId: "cash-b4513",
+  storageBucket: "cash-b4513.appspot.com",
+  messagingSenderId: "224015766489"
+};
   firebase.initializeApp(config);
 
 export default firebase; 

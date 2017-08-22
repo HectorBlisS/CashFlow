@@ -27,7 +27,7 @@ class LoginForm extends Component{
           padding: "42px 20px 50px"
         };
         const { getFieldDecorator } = this.props.form;
-          const {socialLogin} = this.props;
+          const {socialLogin, googleLogin} = this.props;
         return (
           <div style={center}>
 
@@ -41,6 +41,12 @@ class LoginForm extends Component{
                       >
                        Inicia con Facebook
                    </Button>
+                   <Button
+                      type="primary"
+                      onClick={googleLogin}
+                      >
+                      Inicia con google
+                    </Button>
                    <p>o</p>
                </FormItem>
                 <FormItem>
@@ -68,7 +74,7 @@ class LoginForm extends Component{
                   <Button type="primary" htmlType="submit" className="login-form-button">
                     Entrar
                   </Button><br/>
-                  O <a href="">registrate ahora!</a>
+                  O <a href="/registro">registrate ahora!</a>
                 </FormItem>
               </Form>
 

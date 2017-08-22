@@ -16,11 +16,23 @@ class LoginPage extends Component{
     });
 
     }
+
+    googleLogin = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth()
+        .signInWithPopup(provider)
+        .then((result)=>{
+            this.props.history.push('/perfil');
+        });
+
+    }
     
   render(){
     return(
         <LoginForm
             socialLogin={this.socialLogin}
+            googleLogin={this.googleLogin}
         />
     );  
   }

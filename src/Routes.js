@@ -11,6 +11,7 @@ import AddGasto from './components/gastos/AddGasto';
 import IngresosPage from './components/ingresos/IngresosPage';
 import IngresosLista from './components/ingresos/IngresosLista';
 import Perfil from './components/login/Perfil';
+import Registro from './components/login/Registro';
 
 
 const Routes = () => (
@@ -22,6 +23,7 @@ const Routes = () => (
         <Route path="/ingresos" component={IngresosPage}/>
         <Route path="/lista" component={IngresosLista} />
         <Route path="/perfil" component={Perfil}/>
+        <Route path="/registro" component={Registro}/>
 
     </Switch>
 

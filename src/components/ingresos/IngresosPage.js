@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import FormularioI from '../form/FormularioI';
 import firebase from '../../firebase';
-import toastr from 'toastr'
+import toastr from 'toastr';
 
 class IngresosPage extends Component{
      
