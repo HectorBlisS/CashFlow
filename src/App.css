@@ -1,24 +1,37 @@
 @import '~antd/dist/antd.css';
 
-.App {
-  text-align: center;
+.logodos {
+  width: 120px;
+  height: 42px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px 28px 16px 0;
+  float: left;
 }
+  .logo {
+    width:  120px;
+    height: 37px;
+    border-radius: 6px;
+    margin: 16px 24px 16px 0;
+    float: left;
+  }
+  .titulo{
+    color: black;
+  }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
 
-.App-intro {
-  font-size: large;
-}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
