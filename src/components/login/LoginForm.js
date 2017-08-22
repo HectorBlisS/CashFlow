@@ -27,10 +27,22 @@ class LoginForm extends Component{
           padding: "42px 20px 50px"
         };
         const { getFieldDecorator } = this.props.form;
+          const {socialLogin} = this.props;
         return (
           <div style={center}>
 
-              <Form onSubmit={this.handleSubmit} className="login-form">
+              <Form 
+              style={{textAlign:"center"}}
+              onSubmit={this.handleSubmit} className="login-form">
+               <FormItem>
+                   <Button
+                      type="primary"
+                      onClick={socialLogin}
+                      >
+                       Inicia con Facebook
+                   </Button>
+                   <p>o</p>
+               </FormItem>
                 <FormItem>
                   {getFieldDecorator('userName', {
                     rules: [{ required: true, message: '¡Por favor introduce tu nombre de usuario!' }],

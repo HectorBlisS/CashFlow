@@ -1,13 +1,15 @@
 import * as firebase from 'firebase';
 
-const  config = {
-    apiKey: "AIzaSyCEL-uOohuS_ydBJSqRnPKKUELpKEMtk2U",
-    authDomain: "proyecto-4654f.firebaseapp.com",
-    databaseURL: "https://proyecto-4654f.firebaseio.com",
-    projectId: "proyecto-4654f",
-    storageBucket: "proyecto-4654f.appspot.com",
-    messagingSenderId: "351010489404"
+const config = {
+    apiKey: "AIzaSyDlE59HwBaOOnp6jJ475Wm-j4t9izg836c",
+    authDomain: "tallerfixter-f7f34.firebaseapp.com",
+    databaseURL: "https://tallerfixter-f7f34.firebaseio.com",
+    projectId: "tallerfixter-f7f34",
+    storageBucket: "tallerfixter-f7f34.appspot.com",
+    messagingSenderId: "904827933328"
   };
   firebase.initializeApp(config);
 
 export default firebase; 
+
+
