@@ -15,7 +15,7 @@ class App extends Component {
 
       <div>
 
-      <Siguiente/>
+
 
       <div className="App">
         <NavLink to="/ingresos">
@@ -27,6 +27,7 @@ class App extends Component {
         <Routes/>
 
       </div>
+    </div>
 
     );
   }

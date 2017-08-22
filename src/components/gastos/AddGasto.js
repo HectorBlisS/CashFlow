@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Form, DatePicker, Input, InputNumber , Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 import '../login/Login.css';
-import Carru from "../Carru";
+
 
 
 const FormItem = Form.Item;
