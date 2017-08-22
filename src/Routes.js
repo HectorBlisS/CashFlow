@@ -12,6 +12,7 @@ import IngresosPage from './components/ingresos/IngresosPage';
 import IngresosLista from './components/ingresos/IngresosLista';
 import Perfil from './components/login/Perfil';
 import Registro from './components/login/Registro';
+import SignUpPage from './components/signup/SignUpPage'
 
 
 const Routes = () => (
@@ -24,7 +25,7 @@ const Routes = () => (
         <Route path="/lista" component={IngresosLista} />
         <Route path="/perfil" component={Perfil}/>
         <Route path="/registro" component={Registro}/>
-
+        <Route path="/signup" component={SignUpPage}/>
     </Switch>
 
 );
