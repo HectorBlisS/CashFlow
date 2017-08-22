@@ -10,13 +10,22 @@ import {Link, NavLink} from 'react-router-dom';
 
 class App extends Component {
 
-
-
   render() {
     return (
+
       <div>
 
       <Siguiente/>
+
+      <div className="App">
+        <NavLink to="/ingresos">
+          <h1>
+            Probando ingresos, no meter mano >:C
+          </h1>
+        </NavLink>
+
+        <Routes/>
+
       </div>
 
     );
