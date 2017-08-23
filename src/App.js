@@ -20,8 +20,8 @@ class App extends Component {
       <div className="App">
         <NavLink to="/ingresos">
           <h1>
-            Probando ingresos, no meter mano >:C
-          </h1>
+           
+          </h1> 
         </NavLink>
 
         <Routes/>
