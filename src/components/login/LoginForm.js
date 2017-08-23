@@ -1,82 +1,67 @@
 import React, {Component} from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import './Login.css';
+import { SocialIcon } from 'react-social-icons';
 
-const FormItem = Form.Item;
+
 
 class LoginForm extends Component{
-      handleSubmit = (e) => {
+    state = {
+        usuario:{
+            email: '',
+            password: ''
+        }
+    }
+
+    handleSubmit = (e) => {
         e.preventDefault();
-        this.props.form.validateFields((err, values) => {
-          if (!err) {
-            console.log('Received values of form: ', values);
-          }
-        });
+        const {usuario} = this.state;
+        const {userPassLogin} = this.props;
+        userPassLogin(usuario.email, usuario.password);
       }
+
+    handleChange = (e) => {
+        const nombre = e.target.name;
+        const valor = e.target.value;
+        let usuario = this.state.usuario;
+        usuario[nombre] = valor;
+        this.setState({usuario});
+    }
       render() {
         const center = {
           display:"flex",
           justifyContent:"center",
-          alignItems:"center",
-           widht:"100%",
-            height:"80vh"
-        };
+            alignItems:"center",
+               widht:"100%",
+                height:"80vh",
 
-        const border = {
-          border: "1px solid #e9e9e9",
-          padding: "42px 20px 50px"
-        };
-        const { getFieldDecorator } = this.props.form;
+            };
+
+
+          const {usuario} = this.state;
           const {socialLogin, googleLogin} = this.props;
-        return (
-          <div style={center}>
 
-              <Form 
-              style={{textAlign:"center"}}
-              onSubmit={this.handleSubmit} className="login-form">
-               <FormItem>
-                   <Button
-                      type="primary"
-                      onClick={socialLogin}
-                      >
-                       Inicia con Facebook
-                   </Button>
-                   <Button
-                      type="primary"
-                      onClick={googleLogin}
-                      >
-                      Inicia con google
-                    </Button>
-                   <p>o</p>
-               </FormItem>
-                <FormItem>
-                  {getFieldDecorator('userName', {
-                    rules: [{ required: true, message: '¡Por favor introduce tu nombre de usuario!' }],
-                  })(
-                    <Input size="large" prefix={<Icon type="user" style={{ fontSize: 16 }} />} placeholder="Nombre de Usuario" />
-                  )}
-                </FormItem>
-                <FormItem>
-                  {getFieldDecorator('password', {
-                    rules: [{ required: true, message: '¡Por favor introduce tu contraseña!' }],
-                  })(
-                    <Input size="large" prefix={<Icon type="lock" style={{ fontSize: 16 }} />} type="password" placeholder="Contraseña" />
-                  )}
-                </FormItem>
-                <FormItem>
-                  {getFieldDecorator('remember', {
-                    valuePropName: 'checked',
-                    initialValue: true,
-                  })(
-                    <Checkbox>Recuerdame</Checkbox>
-                  )}
-                  <a className="login-form-forgot" href="">Olvidé mi contraseña</a> <br/>
-                  <Button type="primary" htmlType="submit" className="login-form-button">
-                    Entrar
-                  </Button><br/>
-                  O <a href="/registro">registrate ahora!</a>
-                </FormItem>
-              </Form>
+            return (
+              <div style={center}>
+                  <form onSubmit={this.handleSubmit} className="login-form" >
+                      <div style={{textAlign:"center"}}>
+                          <h3>Logearse con</h3>
+                          <SocialIcon className="icon" url="http://facebook.com" onClick={socialLogin} />
+                          <SocialIcon className="icon" url="http://twitter.com" />
+                          <SocialIcon className="icon" url="http://google.com" onClick={googleLogin} />
+                          <p>o</p>
+                      </div>
+
+                      <label htmlFor="email">Nombres</label>
+                      <input value={usuario.correo} type="text" id="email" name="email" placeholder="Nombre" onChange={this.handleChange}/>
+
+                      <label htmlFor="pass">Apellido</label>
+                      <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
+
+
+                      <input type="submit" value="Registarse"/>
+
+                  </form>
 
           </div>
 
@@ -84,5 +69,5 @@ class LoginForm extends Component{
   }
 }
 
-const WrappedNormalLoginForm = Form.create()(LoginForm);
-export default WrappedNormalLoginForm;
+
+export default LoginForm;

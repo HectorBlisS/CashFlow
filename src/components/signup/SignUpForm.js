@@ -5,8 +5,8 @@ import toastr from 'toastr';
 class SignUpForm extends Component{
     state = {
         usuario:{
-            firstname: '',
-            lastname: ''
+            email: '',
+            password: ''
         }
     }
 
@@ -20,19 +20,22 @@ class SignUpForm extends Component{
 
     showUserPass = (event) => {
         event.preventDefault();
-        toastr.success(this.state.usuario.firstname);
+        toastr.success(this.state.usuario.email);
+        const {signInUserPass} = this.props;
+        const {usuario} = this.state;
+        signInUserPass(usuario.email, usuario.password);
     }
 
     render(){
         const {usuario} = this.state;
         return(
             <div className="center">
-                <form onSubmit={this.showUserPass} className="login-form">
-                    <label htmlFor="fname">Nombres</label>
-                    <input value={usuario.fname} type="text" id="fname" name="firstname" placeholder="Nombre" onChange={this.handleChange}/>
+                <form onSubmit={this.showUserPass} className="signup-form">
+                    <label htmlFor="email">Nombres</label>
+                    <input value={usuario.correo} type="text" id="email" name="email" placeholder="Nombre" onChange={this.handleChange}/>
 
-                    <label htmlFor="lname">Apellido</label>
-                    <input value={usuario.lname} type="text" id="lname" name="lastname" placeholder="Apellido" onChange={this.handleChange}/>
+                    <label htmlFor="pass">Apellido</label>
+                    <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
 
 
                     <input type="submit" value="Registarse"/>
