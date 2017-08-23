@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-import Lay from './components/principal/Lay';
-import Siguiente from './components/principal/Siguiente';
+import NavP from './components/principal/NavP';
+import Footer from './components/principal/Footer';
 import Routes from './Routes';
-
 import {Link, NavLink} from 'react-router-dom';
+
 
 
 
@@ -15,7 +14,9 @@ class App extends Component {
 
       <div>
 
+<NavP/>
 
+      <div >
 
       <div className="App">
         <NavLink to="/ingresos">
@@ -25,9 +26,13 @@ class App extends Component {
         </NavLink>
 
         <Routes/>
+            </div>  </div> 
 
-      </div>
+
+<Footer/>
+
     </div>
+
 
     );
   }

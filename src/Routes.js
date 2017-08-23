@@ -15,6 +15,8 @@ import Registro from './components/login/Registro';
 import SignUpPage from './components/signup/SignUpPage';
 import Formu1 from './components/Formulario/Formu1';
 import GlosarioHome from './components/Glosario/GlosarioHome';
+import HomeMeta from './components/Results/HomeMeta';
+import Carru from './components/principal/Carru';
 
 
 const Routes = () => (
@@ -30,6 +32,9 @@ const Routes = () => (
         <Route path="/signup" component={SignUpPage}/>
         <Route path="/lol" component={Formu1}/>
         <Route path="/Glosario" component={GlosarioHome}/>
+        <Route path="/HomeMeta" component={HomeMeta}/>
+          <Route path="/Carru" component={Carru}/>
+
     </Switch>
 
 );

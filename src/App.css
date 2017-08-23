@@ -1,30 +1,14 @@
 @import '~antd/dist/antd.css';
 
-.logodos {
-  width: 120px;
-  height: 42px;
-  background: #333;
-  border-radius: 6px;
-  margin: 16px 28px 16px 0;
-  float: left;
-}
-  .logo {
-    width:  120px;
-    height: 37px;
-    border-radius: 6px;
-    margin: 16px 24px 16px 0;
-    float: left;
-  }
-  .titulo{
-    color: black;
-  }
 
   .ant-carousel .slick-slide {
+
     text-align: center;
     height: 160px;
     line-height: 160px;
     background: #364d79;
     overflow: hidden;
+    width: 118px;
   }
 
   .ant-carousel .slick-slide h3 {

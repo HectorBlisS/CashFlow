@@ -5,6 +5,17 @@
   background:#8A8492;
 }
 
+.logo {
+  width:  120px;
+  height: 40px;
+  border-radius: 6px;
+  margin: 16px 24px 16px 16px;
+  float: left;
+}
+
+
+
+
 {/* lo de al lado*/}
 .ant-layout-header {
   background:#8A8492;
@@ -427,4 +438,23 @@
   padding: 24px 50px;
   color: #ffff;
   font-size: 12px;
+}
+
+
+.pie {
+
+  width: 100%;
+     bottom: 0;
+     position: absolute;
+     height: 65px;
+     background: #8A8492;
+
+
+
+}
+
+.pie h3{
+
+  text-align: center;
+     color: #fff; 
 }
