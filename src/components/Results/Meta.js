@@ -5,7 +5,9 @@ class Meta extends React.Component {
     render (){
         return (
   <div>
-    <p> Tu meta prodrías completarla en : </p>
+    <h3> Tu meta prodrías completarla en : </h3>
+
+
 
   <Progress type="circle" percent={75} format={percent => `${percent} Años`} />
 

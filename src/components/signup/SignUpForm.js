@@ -31,10 +31,10 @@ class SignUpForm extends Component{
         return(
             <div className="center">
                 <form onSubmit={this.showUserPass} className="signup-form">
-                    <label htmlFor="email">Nombres</label>
-                    <input value={usuario.correo} type="text" id="email" name="email" placeholder="Nombre" onChange={this.handleChange}/>
+                    <label htmlFor="email">Correo</label>
+                    <input value={usuario.correo} type="text" id="email" name="email" placeholder="email" onChange={this.handleChange}/>
 
-                    <label htmlFor="pass">Apellido</label>
+                    <label htmlFor="pass">Contraseña</label>
                     <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
 
 

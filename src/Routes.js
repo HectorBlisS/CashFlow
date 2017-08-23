@@ -13,6 +13,8 @@ import IngresosLista from './components/ingresos/IngresosLista';
 import Perfil from './components/login/Perfil';
 import Registro from './components/login/Registro';
 import SignUpPage from './components/signup/SignUpPage'
+import HomeMeta from './components/Results/HomeMeta';
+import Carru from './components/principal/Carru';
 
 
 const Routes = () => (
@@ -26,6 +28,9 @@ const Routes = () => (
         <Route path="/perfil" component={Perfil}/>
         <Route path="/registro" component={Registro}/>
         <Route path="/signup" component={SignUpPage}/>
+        <Route path="/HomeMeta" component={HomeMeta}/>
+          <Route path="/Carru" component={Carru}/>
+
     </Switch>
 
 );

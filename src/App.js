@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-import Lay from './components/principal/Lay';
-import Siguiente from './components/principal/Siguiente';
+import NavP from './components/principal/NavP';
+import Footer from './components/principal/Footer';
 import Routes from './Routes';
-
 import {Link, NavLink} from 'react-router-dom';
+
 
 
 
@@ -15,19 +14,19 @@ class App extends Component {
 
       <div>
 
+<NavP/>
 
+      <div >
 
-      <div className="App">
-        <NavLink to="/ingresos">
-          <h1>
-            Probando ingresos, no meter mano >:C
-          </h1>
-        </NavLink>
 
         <Routes/>
+            </div>
 
-      </div>
+
+<Footer/>
+
     </div>
+
 
     );
   }
