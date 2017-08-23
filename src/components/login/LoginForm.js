@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import './Login.css';
+import {Link, NavLink} from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
+import './Login.css';
 
 
 
@@ -39,16 +40,16 @@ class LoginForm extends Component{
 
 
           const {usuario} = this.state;
-          const {socialLogin, googleLogin} = this.props;
+          const {socialLogin, googleLogin, twitterLogin} = this.props;
 
             return (
               <div style={center}>
                   <form onSubmit={this.handleSubmit} className="login-form" >
                       <div style={{textAlign:"center"}}>
                           <h3>Logearse con</h3>
-                          <SocialIcon className="icon" url="http://facebook.com" onClick={socialLogin} />
-                          <SocialIcon className="icon" url="http://twitter.com" />
-                          <SocialIcon className="icon" url="http://google.com" onClick={googleLogin} />
+                          <SocialIcon className="icon" network="facebook" onClick={socialLogin} />
+                          <SocialIcon className="icon" network="twitter" onClick={twitterLogin}/>
+                          <SocialIcon className="icon" network="google" onClick={googleLogin} />
                           <p>o</p>
                       </div>
 
@@ -59,7 +60,15 @@ class LoginForm extends Component{
                       <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
 
 
-                      <input type="submit" value="Registarse"/>
+                      <input type="submit" value="Iniciar sesión"/>
+                      <p>   
+                        <NavLink to="/signup">
+                        <p textAlign="center">
+                         Registrarse
+                        </p>
+                        </NavLink>
+                        </p>
+                      
 
                   </form>
 
