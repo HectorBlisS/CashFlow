@@ -46,11 +46,11 @@ class LoginForm extends Component{
               <div style={center}>
                   <form onSubmit={this.handleSubmit} className="login-form" >
                       <div style={{textAlign:"center"}}>
-                          <h3>Logearse con</h3>
+                          <h3>Inicia con : </h3>
                           <SocialIcon className="icon" network="facebook" onClick={socialLogin} />
                           <SocialIcon className="icon" network="twitter" onClick={twitterLogin}/>
                           <SocialIcon className="icon" network="google" onClick={googleLogin} />
-                          <p>o</p>
+                          <h3>o</h3>
                       </div>
 
 

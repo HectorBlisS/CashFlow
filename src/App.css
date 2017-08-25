@@ -16,6 +16,67 @@
   }
 
 
+  .video
+{
+position:relative;
+  z-index:9999;
+
+
+
+}
+.vi {
+
+  /*display: table-cell;*/
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  vertical-align: middle;
+
+}
+
+.vi h1 {
+  animation-duration: 3s;
+ animation-name: slidein;
+ animation-iteration-count: 3s;
+  font-size: 100px;
+
+
+}
+.logodos {
+
+width: 40%;
+ height: 40%;
+ margin:10px auto;
+ display:block;
+ -webkit-animation: 3s rotate linear infinite;
+ animation: 3s rotate linear 3s;
+ -webkit-transform-origin: 50% 50%;
+ transform-origin: 50% 50%;
+}
+
+
+
+
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+
+@keyframes slidein {
+  from {
+    margin-left:-150%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
