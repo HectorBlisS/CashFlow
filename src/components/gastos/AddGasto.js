@@ -97,12 +97,54 @@ class AddGasto extends Component{
         let gasto = this.state.gasto;
         gasto[nombre] = valor;
         this.setState({gasto});
+<<<<<<< HEAD
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
         //const tipoPago = this.refs.drop1;
         console.log("Referencia" + this.refs );
+=======
+        console.log(this.state.gasto.precio.length);
+    }
+
+    validarCampos = (e) => {
+
+        let bandera = true;
+        let {gasto} = this.state;
+
+        if(gasto['descripcion'] === ''){
+            bandera = false;
+            toastr.error('Debe poner una descripción');
+        }if (gasto['fecha'] === ''){
+            bandera = false;
+            toastr.error('Debe poner una fecha');
+        }if (gasto['precio'] <= 0 || this.state.gasto.precio.length === 0){
+            bandera = false;
+            toastr.error('Debe poner un precio');
+            console.log(this.state.gasto.precio);
+        }
+
+        return bandera;
+    }
+
+    guardarIngreso = (gasto) => {
+
+        const rama = firebase.database().ref('gastos');
+
+        rama.push(gasto)
+            .then(r=>toastr.success("Se guardó tu gasto con éxito"))
+            .catch(e=>toastr.error('Falló, repite', e));
+
+    };
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        if(!this.validarCampos()){
+            return;
+        }
+        this.guardarIngreso(this.state.gasto);
+>>>>>>> 4d29e7d54e6837d307fc9036a08299d80d106503
         console.log(this.state);
     }
     render(){
@@ -114,7 +156,11 @@ class AddGasto extends Component{
             height:"100%",
 
         };
+<<<<<<< HEAD
         const {categoriaLista, tiposPagoLista} = this.state;
+=======
+        const {categoriaLista, tiposPagoLista, gasto} = this.state;
+>>>>>>> 4d29e7d54e6837d307fc9036a08299d80d106503
 
 
 
@@ -123,7 +169,11 @@ class AddGasto extends Component{
         return(
             <div style={center}>
                 <form style={{padding:"3rem", width:"95%" }} onSubmit={this.handleSubmit}>
+<<<<<<< HEAD
                     <InputItem tipo="number" nombre="precio" handleChange={this.handleChange}  etiqueta="Precio"/>
+=======
+                    <InputItem value={gasto.precio} tipo="number" nombre="precio" handleChange={this.handleChange}  etiqueta="Precio"/>
+>>>>>>> 4d29e7d54e6837d307fc9036a08299d80d106503
                     <InputItem tipo="date" nombre="fecha" handleChange={this.handleChange}  etiqueta="Fecha"/>
                     <InputItem tipo="text" nombre="descripcion" handleChange={this.handleChange}  etiqueta="Descripción"/>
                     <DropDownList ref="drop1" data={categoriaLista} nombre="categoria" handleChange={this.handleChange} etiqueta="Categoria"/>

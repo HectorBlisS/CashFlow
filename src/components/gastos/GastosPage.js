@@ -6,7 +6,6 @@ import {NavLink} from 'react-router-dom';
 
 class GastosPage extends Component{
 
-
     render(){
         const center = {
             display:"flex",
