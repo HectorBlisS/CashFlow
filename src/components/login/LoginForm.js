@@ -53,6 +53,8 @@ class LoginForm extends Component{
                           <p>o</p>
                       </div>
 
+
+
                       <label htmlFor="email">Correo</label>
                       <input value={usuario.correo} type="text" id="email" name="email" placeholder="email" onChange={this.handleChange}/>
 
@@ -63,7 +65,7 @@ class LoginForm extends Component{
                       <input type="submit" value="Iniciar sesión"/>
                       <p>
                         <NavLink to="/signup">
-                        <p textAlign="center">
+                        <p>
                          Registrarse
                         </p>
                         </NavLink>

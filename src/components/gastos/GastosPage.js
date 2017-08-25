@@ -6,7 +6,6 @@ import {NavLink} from 'react-router-dom';
 
 class GastosPage extends Component{
 
-
     render(){
         const center = {
             display:"flex",
@@ -14,14 +13,16 @@ class GastosPage extends Component{
             alignItems:"center",
             widht:"100%",
             height:"80vh",
-            display:"block"
+            display:"block",
+            textAlign: "center"
         };
 
         return(
             <div style={center}>
+                <GraficaGastos/>
                 <TablaGastos />
                 <NavLink to="/gastos/addGasto">
-                    <Button type="primary" icon="plus" > Agregar</Button>
+                    <Button type="primary" icon="plus" style={{margin:"10px"}} > Agregar</Button>
                 </NavLink>
             </div>
         );
