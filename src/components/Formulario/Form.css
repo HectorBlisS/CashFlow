@@ -6,6 +6,7 @@ padding-top: 05%;
    
     padding-left: 35%;
     padding-block-end: 03%;
+    display: block;
 
 }
 
@@ -37,5 +38,11 @@ padding-top: 03%;
 .Form{
     padding-left: 03%;
     padding-right: 03%;
+}
+
+.Form form{
+
+    width: 50%;
+    margin: 0 auto;
 }
 

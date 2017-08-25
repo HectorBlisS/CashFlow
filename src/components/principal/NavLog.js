@@ -4,7 +4,7 @@ import './princi.css';
 import Carru from './Carru';
 
 import { Layout, Menu, Breadcrumb } from 'antd';
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 class Lay extends React.Component {
     render (){

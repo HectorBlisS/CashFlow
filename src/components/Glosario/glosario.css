@@ -5,17 +5,19 @@
     text-anchor: 50px;
     padding-left: 03%;
     padding-right: 03%;
+
     
 }
 
 .Imagen {
 
 
-padding-block-start: 02%;
+padding-block-start: 01%;
 padding-left: 05%;
 
-padding-block-end: 05%;
+padding-block-end: 1%;
 padding-right: 01%;
+border: width 20% border-style color;
 
 
 }
@@ -50,5 +52,17 @@ padding-right: 01%;
 
 
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled){
-    border-color: bisque;
+    border-color: #8F748D;
+}
+
+.Fondo{
+    width:100%;
+    height: 30%;
+    background-color: black;
+    padding-block-end: 01%;
+   
+    
+}
+.Fondo Buscador{
+    float: right;
 }

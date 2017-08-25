@@ -5,7 +5,6 @@ import HomePage from './components/HomePage';
 
 import LoginForm from './components/login/LoginForm';
 
-import LoginPage from './components/login/LoginPage';
 import GastosPage from './components/gastos/GastosPage';
 import AddGasto from './components/gastos/AddGasto';
 import IngresosPage from './components/ingresos/IngresosPage';
@@ -19,10 +18,10 @@ import HomeMeta from './components/Results/HomeMeta';
 import Carru from './components/principal/Carru';
 
 
+
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={HomePage}/>
-        <Route path="/login" component={LoginPage} />
         <Route path="/gastos/addGasto" component={AddGasto}/>
         <Route path="/gastos" component={GastosPage}/>
         <Route path="/ingresos" component={IngresosPage}/>
@@ -34,6 +33,7 @@ const Routes = () => (
         <Route path="/Glosario" component={GlosarioHome}/>
         <Route path="/HomeMeta" component={HomeMeta}/>
           <Route path="/Carru" component={Carru}/>
+      
 
     </Switch>
 
