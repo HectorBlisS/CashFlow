@@ -41,17 +41,17 @@ import toastr from 'toastr';
         render(){
             const {photoURL, displayName,user} = this.state;
             return(
-                <div>
-                   <nav className="nav">
-                       <h3>Logo</h3>
-                           {user && <img
-                        src={photoURL}
-                        />}
-                       </nav>
+              <div>
+                 <nav className="nav">
+                     <h3>Logo</h3>
+                         {user && <img
+                      src={photoURL}
+                      />}
+                     </nav>
 
-                        <h1>{displayName}</h1>
-                        <button onClick={this.signOut}>Cerrar Sesión</button>
-                    </div>
+                      <h1>{displayName}</h1>
+                      <button onClick={this.signOut}>Cerrar Sesión</button>
+                  </div>
 
 
             );

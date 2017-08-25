@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavP from './components/principal/NavP';
-import Footer from './components/principal/Footer';
+//import Footer from './components/principal/Footer';
 import Routes from './Routes';
 import {Link, NavLink} from 'react-router-dom';
 
@@ -23,7 +23,7 @@ class App extends Component {
             </div>
 
 
-<Footer/>
+
 
     </div>
 

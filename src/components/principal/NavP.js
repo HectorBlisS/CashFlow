@@ -1,19 +1,18 @@
 import React from 'react';
-import Routes from '../../Routes';
-import {Link, NavLink} from 'react-router-dom';
 import '../../App.css' ;
 import './princi.css';
-
+import Routes from '../../Routes';
+import {Link, NavLink} from 'react-router-dom';
 
 
 import {  Menu} from 'antd';
 
-class Navp extends React.Component {
+class NavP extends React.Component {
     render (){
         return (
 <div>
 <div>
-  <NavLink to="/"> <img src={require ('./imagen/logo.jpg')}
+  <NavLink to="/"> <img src={require ('./imagen/logo.png')}
       className="logo" />   </NavLink>
 
 
@@ -43,4 +42,4 @@ class Navp extends React.Component {
         );
     }
 }
-export default Navp;
+export default NavP;
