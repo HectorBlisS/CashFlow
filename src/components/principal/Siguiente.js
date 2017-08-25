@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
+import {Link, NavLink} from 'react-router-dom';
 const { SubMenu } = Menu;
 
 
@@ -15,7 +16,7 @@ class Siguiente extends React.Component {
           style={{ height: '100%', borderRight: 0, float: 'left' }}
         >
           <SubMenu key="sub1" title={<span><Icon type="user" />Registro</span>}>
-            <Menu.Item key="1">Ingresos</Menu.Item>
+              <Menu.Item key="1" ><NavLink to="/Deposit"> Ingresos </NavLink></Menu.Item>
           <Menu.Item key="2">Gastos</Menu.Item>
 
           </SubMenu>
