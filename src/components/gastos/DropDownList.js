@@ -4,7 +4,7 @@ class DropDownList extends Component{
     render(){
         const {data,nombre,etiqueta, handleChange} = this.props;
         const dataMap = data.map((r) =>
-            <option value={r.value}>{r.label}</option>
+            <option value={r.label}>{r.value}</option>
         );
         return(
             <div>
