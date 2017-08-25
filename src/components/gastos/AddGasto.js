@@ -101,7 +101,7 @@ class AddGasto extends Component{
     }
 
     validarCampos = (e) => {
-        
+
         let bandera = true;
         let {gasto} = this.state;
 
@@ -119,11 +119,23 @@ class AddGasto extends Component{
 
         return bandera;
     }
+
+    guardarIngreso = (gasto) => {
+
+        const rama = firebase.database().ref('gastos');
+
+        rama.push(gasto)
+            .then(r=>toastr.success("Se guardó tu gasto con éxito"))
+            .catch(e=>toastr.error('Falló, repite', e));
+
+    };
+
     handleSubmit = (e) => {
         e.preventDefault();
         if(!this.validarCampos()){
             return;
         }
+        this.guardarIngreso(this.state.gasto);
         console.log(this.state);
     }
     render(){
