@@ -114,6 +114,15 @@ class AddGasto extends Component{
 
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+        //const tipoPago = this.refs.drop1;
+        console.log("Referencia" + this.refs );
+
+        console.log(this.state.gasto.precio.length);
+
+    }
+
     validarCampos = (e) => {
 
         let bandera = true;
@@ -165,8 +174,8 @@ class AddGasto extends Component{
             height:"100%",
 
         };
-        const {categoriaLista, tiposPagoLista, gasto} = this.state;
 
+        const {categoriaLista, tiposPagoLista, gasto} = this.state;
 
 
 
@@ -174,7 +183,9 @@ class AddGasto extends Component{
         return(
             <div style={center}>
                 <form style={{padding:"3rem", width:"95%" }} onSubmit={this.handleSubmit}>
+
                     <InputItem value={gasto.precio} tipo="number" nombre="precio" handleChange={this.handleChange}  etiqueta="Precio"/>
+
                     <InputItem tipo="date" nombre="fecha" handleChange={this.handleChange}  etiqueta="Fecha"/>
                     <InputItem tipo="text" nombre="descripcion" handleChange={this.handleChange}  etiqueta="Descripción"/>
                     <DropDownList ref="drop1" data={categoriaLista} nombre="categoria" handleChange={this.handleChange} etiqueta="Categoria"/>

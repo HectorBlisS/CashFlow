@@ -1,15 +1,14 @@
 .fondo{
-    background-color: #222;
-    color: white;
+    color: black;
     margin: 20px;
     padding: 20px;
     border: 1px solid #444;
     /*animation: girale 2s ease-in-out infinite;*/
 }
 .Button{
-    
+
     flex-direction: flex-end;
-    background-color: red;    
+    background-color: red;
     }
 
 @keyframes girale{

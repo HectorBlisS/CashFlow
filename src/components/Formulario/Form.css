@@ -1,0 +1,48 @@
+.Nombre{
+padding-top: 05%;
+    
+    background-color: peru;
+    color: paleturquoise;
+   
+    padding-left: 35%;
+    padding-block-end: 03%;
+    display: block;
+
+}
+
+
+.Nombre h1{
+padding-top: 03%;
+
+    color: paleturquoise;
+
+
+}
+
+.element.style h1{
+    color: peru;
+}
+
+
+
+.Iavatar{
+   
+    padding-left: 50%;
+    padding-block-end: 05%;
+}
+
+.ant-input {
+    font-size: 14px;
+}
+
+.Form{
+    padding-left: 03%;
+    padding-right: 03%;
+}
+
+.Form form{
+
+    width: 50%;
+    margin: 0 auto;
+}
+
