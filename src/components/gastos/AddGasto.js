@@ -24,12 +24,13 @@ class AddGasto extends Component{
         }
     }*/
     state = {
+        userId: '',
         gasto:{
             descripcion: '',
             precio: 0.0,
             fecha: '',
-            categoria: 'PERRO',
-            tipoPago: 'PERRO'
+            categoria: '',
+            tipoPago: ''
         },
         categoriaLista: [],
         tiposPagoLista: []
@@ -88,6 +89,19 @@ class AddGasto extends Component{
     componentWillMount(){
         this.recuperarCategorias();
         this.recuperarTiposPago();
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                this.setState({userId:user.uid});
+            } else {
+                // No user is signed in.
+                console.error("No hay usuario activo");
+            }
+        });
+    }
+
+
+    componentDidMount (){
+
     }
 
 
@@ -97,7 +111,7 @@ class AddGasto extends Component{
         let gasto = this.state.gasto;
         gasto[nombre] = valor;
         this.setState({gasto});
-        console.log(this.state.gasto.precio.length);
+
     }
 
     validarCampos = (e) => {
@@ -122,11 +136,15 @@ class AddGasto extends Component{
 
     guardarIngreso = (gasto) => {
 
-        const rama = firebase.database().ref('gastos');
+        const rama = firebase.database().ref(this.state.userId + '/gastos');
 
         rama.push(gasto)
-            .then(r=>toastr.success("Se guardó tu gasto con éxito"))
-            .catch(e=>toastr.error('Falló, repite', e));
+            .then(r=>{
+                toastr.success("Se guardó tu gasto con éxito");
+                this.props.history.push('/gastos');
+            }).catch(e=>{
+                toastr.error('Falló, repite', e);
+            });
 
     };
 
