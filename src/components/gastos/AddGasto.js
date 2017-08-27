@@ -114,14 +114,6 @@ class AddGasto extends Component{
 
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        //const tipoPago = this.refs.drop1;
-        console.log("Referencia" + this.refs );
-
-        console.log(this.state.gasto.precio.length);
-
-    }
 
     validarCampos = (e) => {
 
@@ -145,7 +137,7 @@ class AddGasto extends Component{
 
     guardarIngreso = (gasto) => {
 
-        const rama = firebase.database().ref(this.state.userId + '/gastos');
+        const rama = firebase.database().ref(this.state.userId + 'usuarios/gastos');
 
         rama.push(gasto)
             .then(r=>{
