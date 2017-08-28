@@ -36,7 +36,7 @@ class GastosPage extends Component{
 
 
     recuperarGastos = () => {
-        firebase.database().ref( this.state.userId + '/gastos' )
+        firebase.database().ref( 'usuarios/' + this.state.userId + '/gastos' )
             .once('value')
             .then( (r) =>  {
                 const {listaGastos} = this.state;
