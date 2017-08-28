@@ -137,7 +137,7 @@ class AddGasto extends Component{
 
     guardarIngreso = (gasto) => {
 
-        const rama = firebase.database().ref(this.state.userId + 'usuarios/gastos');
+        const rama = firebase.database().ref(this.state.userId + '/gastos');
 
         rama.push(gasto)
             .then(r=>{

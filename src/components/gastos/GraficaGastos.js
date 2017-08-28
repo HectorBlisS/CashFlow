@@ -40,8 +40,8 @@ class GraficaGastos extends Component{
             maintainAspectRatio: true,
             showScale: true,
             animateScale: true,
-            widht: "80px",
-            height: "80px",
+            widht: "100%",
+            height: "100%",
             legend: {
                 display: true
             },
@@ -55,7 +55,12 @@ class GraficaGastos extends Component{
         };
 
         const doughnutStyle = {
-          margin: "40px"
+          margin: "10px"
+        };
+
+        const divStyle = {
+            display: "table-cell",
+            verticalAlign: "middle"
         };
 
         const labelStyle ={
@@ -66,9 +71,8 @@ class GraficaGastos extends Component{
         };
 
         return(
-            <div style={centerStyle}>
-                <label style={labelStyle} htmlFor="grafica1">Gastos</label>
-                <Doughnut id="grafica1" name="grafica1" options={options} style={doughnutStyle} data={data} widht="60" height="60"  />
+            <div >
+                <Doughnut id="grafica1" name="grafica1" options={options} style={doughnutStyle} data={data} widht="100" height="100"  />
             </div>
         );
     }
