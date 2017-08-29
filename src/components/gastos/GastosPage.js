@@ -11,15 +11,25 @@ import {Row, Col} from 'antd';
 class GastosPage extends Component{
     constructor(props){
         super(props);
+        var mesesNombres = [
+            'Enero','Febrero','Marzo','Abril', 'Mayo', 'Junio',
+            'Julio','Agosto','Septiembre','Octubre','Noviembre', 'Diciembre'
+        ];
+        var date = new Date();
+        var mesTemp = date.getMonth() + 1;
+        var nombreMes = mesesNombres[mesTemp];
+        var dateRam = nombreMes + ' ' + date.getFullYear();
         this.state = {
             userId: '',
-            listaGastos: []
+            listaGastos: [],
+            dateRama: dateRam,
+            categoriaLista: []
         };
+        this.recuperarCategorias();
 
 
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                console.log("Este es el usuario: ");
                 console.log(user.uid);
                 var usuario = user.uid;
                 this.setState({userId:usuario});
@@ -31,12 +41,35 @@ class GastosPage extends Component{
         });
     }
 
+    generarDatosGrafica = () => {
+        var listCounter = [];
+        this.state.categoriaLista.forEach( (categoria) => {
+            console.log('Categoria' + categoria);
+        });
+    }
 
+    recuperarCategorias = () => {
 
-
+        firebase.database().ref('categorias')
+            .once('value')
+            .then(
+                (r) => {
+                    const {categoriaLista} = this.state;
+                    for (let key in r.val()) {
+                        categoriaLista.push(r.val()[key].value);
+                    }
+                    this.setState({categoriaLista});
+                    this.generarDatosGrafica();
+                }
+            ).catch(
+            (error) => {
+                console.log(error);
+            }
+        );
+    }
 
     recuperarGastos = () => {
-        firebase.database().ref( 'usuarios/' + this.state.userId + '/gastos' )
+        firebase.database().ref( 'usuarios/' + this.state.userId + '/gastos/' + this.state.dateRama )
             .once('value')
             .then( (r) =>  {
                 const {listaGastos} = this.state;
@@ -44,7 +77,6 @@ class GastosPage extends Component{
                     listaGastos.push(r.val()[key]);
                 }
                 this.setState({listaGastos});
-                console.log(this.state.listaGastos);
                 //console.log(this.state.listaGastos[0].descripcion);
         }).catch( (e) => {
             toast.error("No lo pude cargar" );
