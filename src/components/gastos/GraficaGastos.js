@@ -7,7 +7,7 @@ class GraficaGastos extends Component{
     render() {
         const data = [
             {
-                value: 3200,
+                value: 0,
                 color:"#F7464A",
                 highlight: "#FF5A5E",
                 label: "Colegiaturas $"
