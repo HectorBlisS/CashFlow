@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
-import { Table, Badge, Menu, Dropdown, Icon } from 'antd';
+import { Table, Modal} from 'antd';
 import './Deposit.css';
 
 
 
 class DepositPage extends Component{
+
+    handleChange = (e) => {
+        const monto = e.target.name;
+        const valor = e.target.value;
+        let ingreso = this.state.ingreso;
+        ingreso[monto] = valor;
+        this.setState({ingreso});
+    }
     render(){
+        const {ingreso} = this.state;
+
         const expandedRowRender = () => {
             const columns = [
                 { title: 'Fecha', dataIndex: 'fecha', key: 'fecha' },
@@ -37,11 +47,29 @@ class DepositPage extends Component{
                 });
             }
             return (
+                <div>
+
                 <Table
                     columns={columns}
                     dataSource={data}
                     pagination={false}
                 />
+                <Modal
+                visible={visible}
+                title="Agregar un nuevo ingreso"
+                okText="Nuevo Ingreso"
+                onCancel={onCancel}
+                onOk={onCreate}
+                >
+                    <label htmlFor="monto">Monto</label>
+                    <input id="monto" name="monto" placeholder="Monto" onChange={this.handleChange}/>
+
+                    <label htmlFor="descripcion">Descripción</label>
+                    <input id="descripcion" name="descripcion" placeholder="Descripcion" onChange={this.handleChange}/>
+                </Modal>
+
+                </div>
+
             );
         };
 
