@@ -161,6 +161,7 @@ class AddGasto extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
+        this.setState({isBlocking:false});
         if(!this.validarCampos()){
             return;
         }
