@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { Card } from 'antd';
 import Buscador from './Buscador';
 import Imagen from './Imagen';
-import Abc from './Abc';
 import './glosario.css';
 import {Link, NavLink} from 'react-router-dom';
 

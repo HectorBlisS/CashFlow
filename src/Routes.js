@@ -6,7 +6,7 @@ import LoginForm from './components/login/LoginForm';
 
 import LoginPage from './components/login/LoginPage';
 import GastosPage from './components/gastos/GastosPage';
-/*import AddGasto from './components/gastos/AddGasto';*/
+import AddGasto from './components/gastos/AddGasto';
 import IngresosPage from './components/ingresos/IngresosPage';
 import IngresosLista from './components/ingresos/IngresosLista';
 import Perfil from './components/login/Perfil';
@@ -27,7 +27,7 @@ const Routes = () => (
     <Switch>
         <Route exact path="/" component={HomePage}/>
         <Route path="/loginpage" component={LoginPage}/>
-        {/*<Route path="/gastos/addGasto" component={AddGasto}/>*/}
+        <Route path="/gastos/addGasto" component={AddGasto}/>
         <Route path="/gastos" component={GastosPage}/>
         <Route path="/ingresos" component={IngresosPage}/>
         <Route path="/lista" component={IngresosLista} />

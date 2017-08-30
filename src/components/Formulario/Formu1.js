@@ -25,7 +25,7 @@ class Formu1 extends React.Component {
     return (
        <div>    
 
-       <div className="Fondos"> <Nombre/></div> <div> <Datos/> 
+       <div className="Fondos"> <Nombre/> </div> <div> <Datos/> 
         {/* <br/><br/>   <br/> <Iavatar/> <br/>*/}
 
         <div className="Form">  

@@ -23,13 +23,13 @@ padding-top: 03%;
 .Fondos{
 
     size:10%;
-    padding-block-end: 02%;
+    padding-block-end: 03%;
     background-color: #000000;
     margin: 0 auto;
     border: 1px solid #bebde9;
     position: relative;
     
-    border: 2px solid rgb(0,0,005); opacity: 0.8;
+    border: 2px solid rgb(0,0,005); opacity: 0.9;
     
    
 }
