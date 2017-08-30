@@ -13,7 +13,7 @@ class Imagen extends React.Component {
 <div className="Imagen">
            
             
-<img src="https://1.bp.blogspot.com/-H9eEQtvg550/T03OFJfOOQI/AAAAAAAAHhQ/AAw7nYGzMX0/s1600/455.png" width="1200" height="200"/>
+< img src="https://wallpaperscraft.com/image/coins_euro_gold_80486_3840x2160.jpg" width="1345" height="400" opacity=" 0.5"/>
 
 
     </div>

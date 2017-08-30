@@ -1,10 +1,11 @@
 .Card {
 
-    padding-top: 02%;
+    padding-top: 03%;
     text-align: center;
     text-anchor: 50px;
     padding-left: 03%;
     padding-right: 03%;
+    position: relative;
 
     
 }
@@ -12,12 +13,14 @@
 .Imagen {
 
 
-padding-block-start: 01%;
-padding-left: 05%;
+padding-block-start: 0%;
+padding-left: 0%;
 
-padding-block-end: 1%;
-padding-right: 01%;
-border: width 20% border-style color;
+
+
+opacity: 0.8;
+filter: alpha(opacity=50);
+border: 2px solid rgb(0,0,005); opacity: 0.8;
 
 
 }
@@ -25,23 +28,48 @@ border: width 20% border-style color;
 .search-btn{
 
     background-color: purple;
+    position: absolute;
+    padding-top: 10%;
     
 }
 
 
 
 .titulo h1{
-    padding-top: 03%;
-    padding-left: 05%;
+    
     padding-block-end: 0%;
     color: #8F748D;
-    font-size: 30px;
-    
+    font-size: 50px;
+    text-shadow: 1px 1px palevioletred;
+    position: absolute;
+    top: 18%;
+    left: 04%;
+
+
+
+ 
+  animation-duration: 3s;
+  animation-name: slidein;
 }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+    
 
 .ant-card{
 
     font-size: 15px;
+    padding-block-start: 02%;
 }
 
 .ant-card-head-title{
@@ -55,14 +83,16 @@ border: width 20% border-style color;
     border-color: #8F748D;
 }
 
-.Fondo{
-    width:100%;
-    height: 30%;
-    background-color: black;
-    padding-block-end: 01%;
+
+.ant-input-affix-wrapper .ant-input:not(:last-child) {
+    padding-right: 24px;
+    margin: 0;
    
-    
 }
-.Fondo Buscador{
-    float: right;
+
+.global-search-wrapper{
+
+    position: absolute;
+    top: 68%;
+    left: 80%;
 }
