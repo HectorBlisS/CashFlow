@@ -7,7 +7,7 @@ class GraficaGastos extends Component{
     render() {
         const data = [
             {
-                value: 3200,
+                value: 0,
                 color:"#F7464A",
                 highlight: "#FF5A5E",
                 label: "Colegiaturas $"
@@ -23,7 +23,7 @@ class GraficaGastos extends Component{
                 color: "#FDB45C",
                 highlight: "#FFC870",
                 label: "Servicios $"
-            }
+            },
         ];
 
         const options = {
@@ -40,13 +40,20 @@ class GraficaGastos extends Component{
             maintainAspectRatio: true,
             showScale: true,
             animateScale: true,
-            widht: "80px",
-            height: "80px",
+            width: "80vw",
+            height: "80vh",
             legend: {
-                display: true
+                visible: true,
+                labels: {
+                }
             },
             tooltips: {
                 enabled: true
+            },
+            title: {
+                display:true,
+                text: 'Grafica de gastos',
+                fontSize: 30
             }
         };
 
@@ -55,7 +62,12 @@ class GraficaGastos extends Component{
         };
 
         const doughnutStyle = {
-          margin: "40px"
+          margin: "10px"
+        };
+
+        const divStyle = {
+            display: "table-cell",
+            verticalAlign: "middle"
         };
 
         const labelStyle ={
@@ -66,9 +78,8 @@ class GraficaGastos extends Component{
         };
 
         return(
-            <div style={centerStyle}>
-                <label style={labelStyle} htmlFor="grafica1">Gastos</label>
-                <Doughnut id="grafica1" name="grafica1" options={options} style={doughnutStyle} data={data} widht="60" height="60"  />
+            <div >
+                <Doughnut id="grafica1" name="grafica1" options={options} style={doughnutStyle} data={this.props.dataGraficaGastos}   />
             </div>
         );
     }
