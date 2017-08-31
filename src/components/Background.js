@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-
 import elvideo  from './principal/imagen/video.mp4';
-/*import Ejemplo from './Ejemplo';*/
+import Animacion from  './Animacion';
 import  '../App.css' ;
-import Java from  './Java';
+
 
 
 class Background extends Component{
@@ -18,7 +17,7 @@ class Background extends Component{
                 </video>
 
                 <div className= "vi">
-                
+
                 <img src={require ('../components/principal/imagen/logo.png')} className="logodos" />
                   <h1> Bienvenidos </h1>
 

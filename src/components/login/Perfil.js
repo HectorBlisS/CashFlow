@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
+import { Button } from 'antd';
 import { Avatar } from 'antd';
+import Formu1 from '../Formulario/Formu1';
 import firebase from '../../firebase';
-import './Login.css';
 import toastr from 'toastr';
+import {Link, NavLink} from 'react-router-dom';
+import './Login.css';
+
+
 
     class Perfil extends Component{
 
@@ -31,7 +36,7 @@ import toastr from 'toastr';
 
         signOut = () => {
             firebase.auth().signOut().then(function() {
-                toastr.success("He salido");
+                toastr.success("Ha cerrado sesión correctamente");
             }, function(error) {
                 toastr.error("No he podido salir");
             });
@@ -43,15 +48,25 @@ import toastr from 'toastr';
             return(
               <div>
                  <nav className="nav">
-                     <h3>Logo</h3>
+                     <h1>Bienvenido</h1>
                          {user && <img
                       src={photoURL}
                       />}
                      </nav>
 
-                      <h1>{displayName}</h1>
-                      <button onClick={this.signOut}>Cerrar Sesión</button>
+                      <h2  className= "nombre">{displayName}</h2>
+
+                      <div className= "boton">
+                      <button  onClick={this.signOut}> Cerrar sesión </button>
+</div>
+
+
+                      <div>
+                        <Formu1/>
+                    </div>
                   </div>
+
+
 
 
             );

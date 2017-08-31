@@ -27,16 +27,16 @@ function searchResult(query) {
 function renderOption(item) {
   return (
     <Option key={item.category} text={item.category}>
-      {item.query} 在
+      {item.query}
       <a
-        href={`https://s.taobao.com/search?q=${item.query}`}
+        href={`=${item.query}`}
         target="_blank"
         rel="noopener noreferrer"
       >
         {item.category}
       </a>
-      区块中
-      <span className="global-search-item-count">约 {item.count} 个结果</span>
+
+      <span className="global-search-item-count"> {item.count} </span>
     </Option>
   );
 }
@@ -63,7 +63,7 @@ class Buscador extends React.Component {
           dataSource={dataSource.map(renderOption)}
           onSelect={onSelect}
           onSearch={this.handleSearch}
-          placeholder="input here"
+          placeholder="Buscar"
           optionLabelProp="text"
         >
 

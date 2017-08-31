@@ -6,7 +6,7 @@
     padding-left: 03%;
     padding-right: 03%;
 
-    
+
 }
 
 .Imagen {
@@ -14,7 +14,6 @@
 
 padding-block-start: 01%;
 padding-left: 05%;
-
 padding-block-end: 1%;
 padding-right: 01%;
 border: width 20% border-style color;
@@ -25,7 +24,7 @@ border: width 20% border-style color;
 .search-btn{
 
     background-color: purple;
-    
+
 }
 
 
@@ -36,7 +35,7 @@ border: width 20% border-style color;
     padding-block-end: 0%;
     color: #8F748D;
     font-size: 30px;
-    
+
 }
 
 .ant-card{
@@ -51,6 +50,7 @@ border: width 20% border-style color;
 
 
 
+
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled){
     border-color: #8F748D;
 }
@@ -60,9 +60,9 @@ border: width 20% border-style color;
     height: 30%;
     background-color: black;
     padding-block-end: 01%;
-   
-    
+
+
 }
 .Fondo Buscador{
-    float: right;
+    float: left;
 }

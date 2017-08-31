@@ -3,11 +3,12 @@ import LoginForm from './LoginForm';
 import firebase from '../../firebase';
 import toastr from 'toastr';
 
+
 class LoginPage extends Component{
-    
+
     socialLogin = () => {
         const provider = new firebase.auth.FacebookAuthProvider();
-        
+
     firebase.auth()
         .signInWithPopup(provider)
         .then((result)=>{
@@ -19,7 +20,7 @@ class LoginPage extends Component{
 
     twitterLogin = () =>{
         var provider = new firebase.auth.TwitterAuthProvider();
-        
+
         firebase.auth().signInWithPopup(provider).then(function(result) {
             var token = result.credential.accessToken;
             var secret = result.credential.secret;
@@ -27,7 +28,7 @@ class LoginPage extends Component{
 
             toastr.success("Bienvenido");
             this.props.history.push('/perfil');
-            
+
           }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -52,7 +53,7 @@ class LoginPage extends Component{
             var email = error.email;
             var credential = error.credential;
             toastr.error("Algo salió mal" + errorMessage);
-        
+
         });
     }
 
@@ -76,7 +77,7 @@ class LoginPage extends Component{
             userPassLogin={this.userPassLogin}
             twitterLogin={this.twitterLogin}
         />
-    );  
+    );
   }
 }
 

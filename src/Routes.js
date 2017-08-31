@@ -3,7 +3,6 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import HomePage from './components/HomePage';
 import LoginForm from './components/login/LoginForm';
-
 import LoginPage from './components/login/LoginPage';
 import GastosPage from './components/gastos/GastosPage';
 import AddGasto from './components/gastos/AddGasto';
@@ -16,7 +15,8 @@ import Formu1 from './components/Formulario/Formu1';
 import GlosarioHome from './components/Glosario/GlosarioHome';
 import DepositPage from './components/ingresos/DepositPage';
 import HomeMeta from './components/Results/HomeMeta';
-import Carru from './components/principal/Carru';
+import Siguiente from './components/principal/Siguiente';
+import Inicia from './components/Tuinicio/Inicia';
 
 
 
@@ -35,10 +35,10 @@ const Routes = () => (
         <Route path="/lol" component={Formu1}/>
         <Route path="/Glosario" component={GlosarioHome}/>
         <Route path="/HomeMeta" component={HomeMeta}/>
-          <Route path="/Carru" component={Carru}/>
-      
-        <Route path="/Carru" component={Carru}/>
+        <Route path="/Formu1" component={Formu1}/>
+        <Route path="/Sigui" component={Siguiente}/>
         <Route path="/Deposit" component={DepositPage}/>
+          <Route path="/Inicia" component={Inicia}/>
 
 
     </Switch>

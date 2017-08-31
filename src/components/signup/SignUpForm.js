@@ -5,6 +5,8 @@ import toastr from 'toastr';
 class SignUpForm extends Component{
     state = {
         usuario:{
+          nombres: '',
+          apellidos:'',
             email: '',
             password: ''
         }
@@ -31,11 +33,21 @@ class SignUpForm extends Component{
         return(
             <div className="center">
                 <form onSubmit={this.showUserPass} className="signup-form">
+
+                  <label htmlFor="name">Nombre</label>
+                  <input type="text" id="name " name="names" placeholder="Nombre" onChange={this.handleChange}/>
+
+                  <label htmlFor="apellido">Apellidos</label>
+                  <input type="text" id="apelli " name="apellido" placeholder="Apellidos" onChange={this.handleChange}/>
+
+
+
                     <label htmlFor="email">Correo</label>
-                    <input value={usuario.correo} type="text" id="email" name="email" placeholder="email" onChange={this.handleChange}/>
+                    <input value={usuario.correo} type="text" id="email" name="email" placeholder="Correo electrónico" onChange={this.handleChange}/>
 
                     <label htmlFor="pass">Contraseña</label>
                     <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
+
 
 
                     <input type="submit" value="Registarse"/>

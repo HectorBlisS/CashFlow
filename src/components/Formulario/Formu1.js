@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
 import { Form, Input, Button, Radio, InputNumber,Card } from 'antd';
 import Nombre from './Nombre';
-import Image from './Image';
 import Edad from './Edad';
 import Sexo from './Sexo';
 import Iavatar from './Iavatar';
+import Modal from './Modal';
 import './Form.css';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 
-    
+
 
 
 class Formu1 extends React.Component {
 
 
-  constructor() {   
+  constructor() {
     super();
     /*this.state = {
       formLayout: 'horizontal',
@@ -23,8 +23,8 @@ class Formu1 extends React.Component {
     this.state = {
       value: 1,
     }
-  
-    
+
+
   }
 
   onChange = (e) => {
@@ -41,7 +41,7 @@ class Formu1 extends React.Component {
   }
   render() {
 
-     
+
         const center = {
             display:"flex",
             justifyContent:"center",
@@ -84,60 +84,83 @@ class Formu1 extends React.Component {
       },
     };
 
-    
+
     return (
 
-        <div className="Form">    <Nombre/>  <br/><br/>   <br/> <Iavatar/> <br/>
-          
-         <div className="Cardf"> </div>
-         
-         
+
+
+
+
+
       <div>
-        <Card style={{ width: 10 }} style={{ background: '#ECECEC', padding: '40px', justifyContent: 'center' }}>
+        <Card style={{ width: 10 }} style={{ background: '#ECECEC', padding: '50px', justifyContent: 'center' }}>
 
          <Form >
 
 
 
           <FormItem
-          {...formItemLayout} 
-          label="Nombre:">
-          <Input placeholder="Ingresa tu Nombre" />
-            
-           
+          {...formItemLayout}
+          label="Profesión:">
+          <Input placeholder="Profesión" />
+          </FormItem>
 
+
+          <FormItem
+          {...formItemLayout}
+          label="Sueldo:">
+          <Input placeholder="Sueldo" />
           </FormItem>
 
           <FormItem
           {...formItemLayout}
-          label="Apellido Paterno:">
-          <Input placeholder="Ingresa tu Apellido Paterno" />
-            
-            
+          label="Interés:">
+          <Input placeholder="Interéses" />
           </FormItem>
+
+
 
           <FormItem
           {...formItemLayout}
-          label="Apellido Materno:">
-          <Input placeholder="Ingresa tu Apellido Materno" />
-            
-            
+          label="Negocios:">
+          <Input placeholder="Negocios" />
+
+
           </FormItem>
 
-          <FormItem
-          {...formItemLayout}
-          label="E-mail">
-          <Input placeholder="Ingresa E-mail" />
-            
-            
-          </FormItem>
+
 
           <FormItem {...formItemLayout}
           label="Edad:"
           >
-          <InputNumber placeholder="Ingresa tu edad" />
-            
+          <InputNumber placeholder="Tu edad" />
+
           </FormItem>
+
+    <FormItem {...formItemLayout}
+                    label="Número de hijos:"
+                    >
+                    <InputNumber placeholder="Hijos" />
+
+                  </FormItem>
+
+                  <FormItem
+                  {...formItemLayout}
+                    label="Gastos por hijo:">
+                  <Input placeholder="Gastos por hijo" />
+                  </FormItem>
+
+
+
+                            <FormItem
+                            {...formItemLayout}
+                            label="Total de gastos:">
+                            <Input placeholder="Total de gastos" />
+
+
+                            </FormItem>
+
+
 
           <FormItem
           wrapperCol={{sm:{offset:6}}}>
@@ -145,30 +168,33 @@ class Formu1 extends React.Component {
             <RadioGroup onChange={this.onChange} value={this.state.value}>
               <Radio value={1}>Femenino</Radio>
               <Radio value= {2}>Masculino</Radio>
-              
+
             </RadioGroup>
 
-            
+
           </FormItem>
 
-          <FormItem 
+          <FormItem
           wrapperCol={{sm:{offset:10}}}>
-            <Button type="primary">Submit</Button>
+        <Modal/>
           </FormItem>
+
+
+
         </Form>
 
 
         {/*<Form layout={formLayout} >
-          
 
-          <FormItem 
-            label="Nombre:" 
+
+          <FormItem
+            label="Nombre:"
             {...formItemLayout}
           >
             <Input placeholder="Ingresa tu Nombre" />
           </FormItem>
-          
-        
+
+
           <FormItem
             label="Apellido Paterno"
             {...formItemLayout}
@@ -184,7 +210,7 @@ class Formu1 extends React.Component {
           </FormItem>
 
           <Edad/> <br/>
-          
+
 
           <FormItem
             label="Field D"
@@ -199,8 +225,10 @@ class Formu1 extends React.Component {
             <Button type="primary">Submit</Button>
           </FormItem>
         </Form> */} </Card>
-      </div>  </div> 
-             
+      </div>
+
+
+
     );
   }
 }

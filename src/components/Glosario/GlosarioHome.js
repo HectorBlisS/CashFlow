@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import { Card } from 'antd';
 import Buscador from './Buscador';
-import Imagen from './Imagen';
 import Abc from './Abc';
-import './glosario.css';
 import { Icon, Button, Input, AutoComplete } from 'antd';
 import { Collapse } from 'antd';
+import './glosario.css';
 const Panel = Collapse.Panel;
 
 
@@ -13,47 +12,42 @@ const Option = AutoComplete.Option;
 
 
 
-class GlosarioHome extends Component{  
+class GlosarioHome extends Component{
 
 
-    
 
-   
+
+
     changeRoute = () => {
-        this.props.history.push("/");  
+        this.props.history.push("/");
     }
 
-    
+
     render(){
         return(
-         
-        
-            <div> 
-          <div className="titulo"> 
-            
-              
-               <div className="Fondo"> 
-                <h1>GLOSARIO</h1>
-                   <Imagen/>
-                   
-                   <Buscador /> </div>
-                  
-            
-                
-               
-          
-                </div> 
+
+<div>
+            <div>
+                <Buscador/>
+
+              </div>
+
+
+
+
+
+
 
 <div>
   <Card>
-    
+
 <div style={{ background: '#BF9BBD', padding: '05px', width:'100%'}}>
    <Collapse accordion  >
     <Panel header={'ACTIVO: (Asset)'} key="1" >
       <p>Algo que coloca dinero " en un bolsillo" con poco trabajo</p>
     </Panel>
     <Panel header={'ACCIÓN: (Stoke Share)'} key="2">
-      <p>Una acción representa la propiedad de una empresa. Los accionistas (aquellos que poseen acciones en una empresa) 
+      <p>Una acción representa la propiedad de una empresa. Los accionistas (aquellos que poseen acciones en una empresa)
         son los propietarios reales de la empresa.</p>
     </Panel>
     <Panel header={'BALANCE GENERAL: (Balance sheet)'} key="3">
@@ -69,11 +63,11 @@ class GlosarioHome extends Component{
       <p>Gastos, a menudo innecesarios o imprevistos, que simplemente le quitan dinero</p>
     </Panel>
     <Panel header={'CERTIFICADO DE DÉPOSITO: (Certificate of Deposit)'} key="7">
-      <p>Préstamo al gobierno y a las empresas emitido por intermedio de los bancos, con fechas de vencimiento 
+      <p>Préstamo al gobierno y a las empresas emitido por intermedio de los bancos, con fechas de vencimiento
         y tipos de interés específicos</p>
     </Panel>
     <Panel header={'CONSORCIO DE INVERSIÓN INMOBILIARIA: (REIT o Real Estate Investment Trust)'} key="8">
-      <p>Similar a un fondo de inversión, pero en el ámbito inmobiliario. Similar a un fondo de inversión, 
+      <p>Similar a un fondo de inversión, pero en el ámbito inmobiliario. Similar a un fondo de inversión,
         pero exclusivamente en el ámbito inmobiliario</p>
     </Panel>
     <Panel header={'DIVIDENDO: (Dividend)'} key="9">
@@ -89,7 +83,7 @@ class GlosarioHome extends Component{
       <p>Empresa dirigida mediante tecnología en lugar de personas</p>
     </Panel>
     <Panel header={'ESTADO DE PÉRDIDAS Y GANANCIAS: (Income statement)'} key="13">
-      <p>Le muestra sus ingresos y gastos durante un periodo de tiempo. 
+      <p>Le muestra sus ingresos y gastos durante un periodo de tiempo.
         También se llama cuenta de pérdidas y ganancias. (Se encuentra en la parte izquierda
         de su Tarjeta de Juego</p>
     </Panel>
@@ -99,7 +93,7 @@ class GlosarioHome extends Component{
         El flujo de efectivo nos indica si la situación es favorable o no.</p>
     </Panel>
     <Panel header={'FONDO DE INVERSIÓN : (Mutual fund)'} key="15">
-      <p>Un conjunto de acciones, bonos, y valores bursátiles, gestionados por una empresa de inversiones 
+      <p>Un conjunto de acciones, bonos, y valores bursátiles, gestionados por una empresa de inversiones
         profesional y comprados por particulares mediante acciones.
         Las acciones no poseen un valor de propiedad directo en las diversas compañias</p>
     </Panel>
@@ -121,7 +115,7 @@ class GlosarioHome extends Component{
       <p>Ingreso generado</p>
     </Panel>
     <Panel header={'INTERCAMBIO DE IMPUESTOS DIFERIDOS: (Tax-Deferred Exchange)'} key="21">
-      <p>Método de compras y vender propiedades inmobiliarias que le permite diferir el pago de 
+      <p>Método de compras y vender propiedades inmobiliarias que le permite diferir el pago de
       impuestos sobre sus beneficios de inversiones</p>
     </Panel>
     <Panel header={'MERCADO: (The Market)'} key="22">
@@ -143,30 +137,27 @@ class GlosarioHome extends Component{
       <p>La media de precios altos y bajos de una inversión</p>
     </Panel>
     <Panel header={'RENDIMIENTO DE LA INVERSIÓN: (Return on Investment)'} key="28">
-      <p>Rendimiento de la inversión. Retorno del capital, como porcentaje de una inversión 
-      Ejemplo: un apartamento cuesta $500.000. Usted paga $100.000 como pago inicial. 
+      <p>Rendimiento de la inversión. Retorno del capital, como porcentaje de una inversión
+      Ejemplo: un apartamento cuesta $500.000. Usted paga $100.000 como pago inicial.
       Tiene un flujo de efectivo mensual de $2.000. Su rendimiento de la inversión en $2.000 x 12 dividido por $100.000 o 24%</p>
     </Panel>
     <Panel header={'RENDIMIENTO DEL EFECTIVO'} key="29">
       <p>Retorno del efectivo. <a href=" ">Ver: Rendimiento de la inversión</a></p>
     </Panel>
     <Panel header={'SOCIEDAD DE RESPONSABILIDAD LIMITADA (SL): (Limited partnership)'} key="30">
-      <p>Entidad legal constituida para mantener activos. Establece responsabilidad limitada 
+      <p>Entidad legal constituida para mantener activos. Establece responsabilidad limitada
       a un grupo limitado de miembros</p>
     </Panel>
   </Collapse> </div> </Card>
-            
-             
-                    
 
-<div className="Card">
+<div >
 
-  
+<Abc/>
 
-  
-</div> 
-</div> </div> 
-        
+</div>
+</div>
+</div>
+
         );
     }
 }

@@ -1,5 +1,3 @@
-
-
 var contador = 1;
 
 function main(){
