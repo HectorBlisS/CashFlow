@@ -1,9 +1,9 @@
 input[type=submit].aceptarGasto {
     width: 100%;
-    background-color: #270633;
+    background-color: #79325b;
     color: white;
     padding: 14px 20px;
-    margin: 10px;
+    margin: 30px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -11,10 +11,10 @@ input[type=submit].aceptarGasto {
 
 button.cancelarGasto{
     width: 100%;
-    background-color: #D18E1A;
+    background-color: #d0894a;
     color: white;
     padding: 14px 20px;
-    margin: 10px;
+    margin: 30px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
