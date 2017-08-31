@@ -26,7 +26,7 @@ class NavP extends React.Component {
         style={{ lineHeight: '70px' }}
       >
 
-    <Menu.Item key="1"> <NavLink to="/login">   Entrar   </NavLink> </Menu.Item>
+    <Menu.Item key="1"> <NavLink to="/loginPage">   Entrar   </NavLink> </Menu.Item>
           <Menu.Item key="2"> <NavLink to="/Glosario"> Glosario </NavLink> </Menu.Item>
           <Menu.Item key="3"> <NavLink to="/HomeMeta">  Tu perfil   </NavLink> </Menu.Item>
 

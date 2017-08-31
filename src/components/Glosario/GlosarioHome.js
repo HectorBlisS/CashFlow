@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import { Card } from 'antd';
 import Buscador from './Buscador';
 import Imagen from './Imagen';
-import './glosario.css';
 import {Link, NavLink} from 'react-router-dom';
+import './glosario.css';
+
 
 import { Icon, Button, Input, AutoComplete } from 'antd';
 import { Collapse } from 'antd';

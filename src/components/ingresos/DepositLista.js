@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { Table, Modal} from 'antd';
+import { Table, Button} from 'antd';
 import DepositModal from './DepositModal';
 import './Deposit.css';
+import DepositModalEdit from "./DepositModalEdit";
 
 
 
@@ -23,8 +24,9 @@ class DepositPage extends Component{
 
                     render: () => (
                         <span className={'table-operation'}>
-            <DepositModal/>
-            <a href="#">Eliminar</a>
+            <DepositModalEdit/>
+                            <br/>
+            <Button type="primary">Eliminar</Button>
           </span>
                     ),
                 },
@@ -57,7 +59,7 @@ class DepositPage extends Component{
             { title: 'Tipo', dataIndex: 'tipo', key: 'tipo' },
             { title: 'Fecha', dataIndex: 'createdAt', key: 'createdAt' },
             { title: 'Total', dataIndex: 'total', key: 'total' },
-            { title: 'Acción', key: 'operation', render: () => <DepositModal/>},
+            { title: 'Acción', key: 'operation', render: () => <DepositModalEdit/>},
         ];
 
         const data = [];
@@ -79,7 +81,7 @@ class DepositPage extends Component{
                 expandedRowRender={expandedRowRender}
                 dataSource={data}
             />
-               <DepositModal/>
+               <DepositModal />
             </div>
 
 

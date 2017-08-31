@@ -17,7 +17,7 @@ class Siguiente extends React.Component {
         >
           <SubMenu key="sub1" title={<span><Icon type="user" />Registro</span>}>
               <Menu.Item key="1" ><NavLink to="/Deposit"> Ingresos </NavLink></Menu.Item>
-          <Menu.Item key="2">Gastos</Menu.Item>
+              <Menu.Item key="2"><NavLink to="/gastos">Gastos</NavLink></Menu.Item>
 
           </SubMenu>
           <SubMenu key="sub2" title={<span><Icon type="calculator" />Flujo</span>}>
