@@ -57,15 +57,31 @@ class GastosPage extends Component{
         var dataGraficaGastos = [];
 
 
-
+        var i = 0;
         claveValor.forEach( (cv) => {
-            var number = Math.floor(Math.random() * 16777215);
-            var colorPrimary = this.generarColorPrimario(number);
-            var colorSecondary = this.generarColorSecundario(number);
+            var paletaColores = [
+              '#A3B50B',
+              '#7A8233',
+              '#6181EB',
+              '#E8C726',
+              '#005AB5',
+              '#46B56B',
+              '#33824E',
+              '#CC61EB',
+              '#5DE826',
+              '#1DCBF5',
+              '#5B00B5'
+            ];
+            //var number = Math.floor(4719190 + Math.random() * 12269014 );
+            //var colorPrimary = this.generarColorPrimario(number);
+            var colorPrimary = '';
+            colorPrimary = paletaColores[i];
+            i += 1;
+            //var colorSecondary = this.generarColorSecundario(number);
             dataGraficaGastos.push({
                 value: cv.cantidad,
-                color:"#" + colorPrimary,
-                highlight: "#" + colorPrimary,
+                color: colorPrimary,
+                highlight: colorPrimary,
                 label: cv.categoria
             });
         });

@@ -124,7 +124,6 @@ class AddGasto extends Component{
 
     }
 
-
     validarCampos = (e) => {
 
         let bandera = true;
@@ -205,7 +204,7 @@ class AddGasto extends Component{
                     <Row >
                         <Col xs={24} sm={24} md={12} lg={12} xl={12} style={rowStyle}>
                             <InputItem
-                                value={gasto.precio}
+                                placeholder="$MXN"
                                 tipo="number"
                                 nombre="precio"
                                 handleChange={this.handleChange}
@@ -227,6 +226,7 @@ class AddGasto extends Component{
                     <Row>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12} style={rowStyle}>
                             <InputItem
+                                placeholder="Ej. Colegiatura de hijos"
                                 tipo="text"
                                 nombre="descripcion"
                                 handleChange={this.handleChange}
