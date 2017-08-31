@@ -6,6 +6,7 @@ import {NavLink} from 'react-router-dom';
 import firebase from '../../firebase';
 import toast from 'toastr';
 import {Row, Col} from 'antd';
+import Navegacion from '../principal/Siguiente'
 
 
 class GastosPage extends Component{
@@ -38,6 +39,8 @@ class GastosPage extends Component{
             } else {
                 // No user is signed in.
                 console.error("No hay usuario activo");
+                toast.error('No ha iniciado sesión');
+                this.props.history.push("/loginpage");
             }
         });
     }
@@ -159,7 +162,10 @@ class GastosPage extends Component{
         return(
             <div>
                 <Row>
-                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                    <Col xs={24} sm={24} md={4} lg={4} xl={4}>
+                        <section> <Navegacion/> </section>
+                    </Col>
+                    <Col xs={24} sm={24} md={10} lg={10} xl={10}>
                         <div style={padre}>
                             <div style={hijo}>
                                 <GraficaGastos dataGraficaGastos={dataGraficaGastos}/>
@@ -167,7 +173,7 @@ class GastosPage extends Component{
 
                         </div>
                     </Col>
-                    <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                    <Col xs={24} sm={24} md={10} lg={10} xl={10}>
                         <div>
                             <TablaGastos datos={this.state.listaGastos} />
                             <NavLink to="/gastos/addGasto" >
