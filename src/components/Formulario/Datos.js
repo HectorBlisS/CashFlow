@@ -1,26 +1,40 @@
 import React, {Component} from 'react';
 import { Form, Input, Button, Radio, InputNumber,Card } from 'antd';
-import Nombre from './Nombre';
-import Edad from './Edad';
-import Sexo from './Sexo';
-import Iavatar from './Iavatar';
-<<<<<<< HEAD
-import Modal from './Modal';
-=======
-import Datos from './Datos';
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
 import './Form.css';
+import firebase from '../../firebase';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 
+class Datos extends React.Component {
 
 
 
-class Formu1 extends React.Component {
+  state = {
+      formLayout: 'horizontal',
+        dato:{
+            nameu:100,
+            apellidop:99,
+            bliss:'bliss'
+        }
+    }
+    
+    handleChange = (e) => {
+        const nombre = e.target.name;
+        const valor = e.target.value;
+        let dato = this.state.lista;
+        dato[nombre] = valor;
+        this.setState({dato});
+        console.log(this.state.lista);
+ //      console.log(e.target.name);
+    }
+    
+    guardar = () => {
+    this.props.guardarDato(this.state.lista)
+    }
 
 
-<<<<<<< HEAD
-  constructor() {
+
+  constructor() {   
     super();
     /*this.state = {
       formLayout: 'horizontal',
@@ -28,8 +42,8 @@ class Formu1 extends React.Component {
     this.state = {
       value: 1,
     }
-
-
+  
+    
   }
 
   onChange = (e) => {
@@ -46,15 +60,9 @@ class Formu1 extends React.Component {
   }
   render() {
 
-
-        const center = {
-            display:"flex",
-            justifyContent:"center",
-            alignItems:"center",
-            widht:"100%",
-            height:"80vh",
-            display:"block"
-        };
+     
+       
+        
 
     /*const { formLayout } = this.state;
     const formItemLayout = formLayout === 'horizontal' ? {
@@ -65,14 +73,14 @@ class Formu1 extends React.Component {
       wrapperCol: { span: 5, offset: 4 },
     } : null;*/
 
-
-    const formItemLayout = {
+    const { dato } = this.state;
+    const formItemLayout = {   
       labelCol: {
         xs: { span: 24 },
         sm: { span: 6 },
       },
       wrapperCol: {
-        xs: { span: 24 },
+        xs: { span: 14 },
         sm: { span: 14 },
       },
     };
@@ -83,135 +91,115 @@ class Formu1 extends React.Component {
           offset: 0,
         },
         sm: {
-          span: 14,
-          offset: 6,
+          span: 10,
+          offset: 1,
         },
       },
     };
 
-
-    return (
-
-
-
-
-
-
-      <div>
-        <Card style={{ width: 10 }} style={{ background: '#ECECEC', padding: '50px', justifyContent: 'center' }}>
-
-         <Form >
-=======
-  
-  render() {
-
     
-
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
-
     return (
-       <div>    
+        <div className="Form"> 
+        <div className="Datos"> 
+         
+          
 
-       <div className="Fondos"> <Nombre/> </div> <div> <Datos/> 
-        {/* <br/><br/>   <br/> <Iavatar/> <br/>*/}
-
-<<<<<<< HEAD
-          <FormItem
-          {...formItemLayout}
-          label="Profesión:">
-          <Input placeholder="Profesión" />
-          </FormItem>
-
-
-          <FormItem
-          {...formItemLayout}
-          label="Sueldo:">
-          <Input placeholder="Sueldo" />
-          </FormItem>
+         
+      <div> 
+                
+        <Card className="Card"
+        
+         style={{ width: 10 }} style={{ background: '#ECECEC', padding: '10px', justifyContent: 'center' }}>
+ 
+         <Form >
 
           <FormItem
-          {...formItemLayout}
-          label="Interés:">
-          <Input placeholder="Interéses" />
-          </FormItem>
-
-
-
-          <FormItem
-          {...formItemLayout}
-          label="Negocios:">
-          <Input placeholder="Negocios" />
-
+          {...formItemLayout} 
+          label="Nombre:">
+          <Input placeholder="Ingresa tu Nombre" />
+          {/*<input
+             name="nameu"
+               value={dato.nameu}
+               onChange={this.handleChange}
+          />*/}
 
           </FormItem>
 
+          <FormItem
+          {...formItemLayout}
+          label="Apellido Paterno:">
+          <Input placeholder="Ingresa tu Apellido Paterno" />
+          {/*<input
+             name="apellidop"
+              value={dato.apellidop}
+               onChange={this.handleChange}
+          />*/}
+            
+            
+          </FormItem>
 
+          <FormItem
+          {...formItemLayout}
+          label="Apellido Materno:">
+          <Input placeholder="Ingresa tu Apellido Materno" />
+            
+            
+          </FormItem>
+
+          <FormItem
+          {...formItemLayout}
+          label="E-mail">
+          <Input placeholder="Ingresa E-mail" 
+          />
+            
+            
+          </FormItem>
 
           <FormItem {...formItemLayout}
           label="Edad:"
           >
-          <InputNumber placeholder="Tu edad" />
-
+          <InputNumber placeholder="Edad" />
+          
           </FormItem>
 
-    <FormItem {...formItemLayout}
-                    label="Número de hijos:"
-                    >
-                    <InputNumber placeholder="Hijos" />
-
-                  </FormItem>
-
-                  <FormItem
-                  {...formItemLayout}
-                    label="Gastos por hijo:">
-                  <Input placeholder="Gastos por hijo" />
-                  </FormItem>
-
-
-
-                            <FormItem
-                            {...formItemLayout}
-                            label="Total de gastos:">
-                            <Input placeholder="Total de gastos" />
-
-
-                            </FormItem>
-
-
-
           <FormItem
-          wrapperCol={{sm:{offset:6}}}>
+          wrapperCol={{sm:{offset:2}}}>
 
             <RadioGroup onChange={this.onChange} value={this.state.value}>
               <Radio value={1}>Femenino</Radio>
               <Radio value= {2}>Masculino</Radio>
-
+              
             </RadioGroup>
 
+            
+          </FormItem> <br/> <br/> <br/>
 
-          </FormItem>
-
-          <FormItem
-          wrapperCol={{sm:{offset:10}}}>
-        <Modal/>
-          </FormItem>
-
-
-
+          <FormItem 
+          wrapperCol={{sm:{offset:24}}}
+          flex={{reduceRight:10}}>
+          
+            <Button  className="Button" type=""onClick={this.guardar}>Submit</Button>
+            
+            <br/>
+         
+            
+            </FormItem>
+            
+          
         </Form>
 
 
         {/*<Form layout={formLayout} >
+          
 
-
-          <FormItem
-            label="Nombre:"
+          <FormItem 
+            label="Nombre:" 
             {...formItemLayout}
           >
             <Input placeholder="Ingresa tu Nombre" />
           </FormItem>
-
-
+          
+        
           <FormItem
             label="Apellido Paterno"
             {...formItemLayout}
@@ -227,7 +215,7 @@ class Formu1 extends React.Component {
           </FormItem>
 
           <Edad/> <br/>
-
+          
 
           <FormItem
             label="Field D"
@@ -242,24 +230,9 @@ class Formu1 extends React.Component {
             <Button type="primary">Submit</Button>
           </FormItem>
         </Form> */} </Card>
-      </div>
-
-
-
-=======
-        <div className="Form">  
-           
-         <div className="Cardf"> 
-         
-         
-       </div> </div> </div> </div>
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
+      </div>  </div>   </div> 
     );
   }
 }
 
-export default Formu1;
-<<<<<<< HEAD
-=======
-
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
+export default Datos;

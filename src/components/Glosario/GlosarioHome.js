@@ -43,6 +43,7 @@ class GlosarioHome extends Component{
 
 <div style={{ background: '#BF9BBD', padding: '05px', width:'100%'}}>
    <Collapse accordion  >
+
     <Panel header={'ACTIVO: (Asset)'} key="1" >
       <p>Algo que coloca dinero " en un bolsillo" con poco trabajo</p>
     </Panel>
@@ -142,8 +143,11 @@ class GlosarioHome extends Component{
       Tiene un flujo de efectivo mensual de $2.000. Su rendimiento de la inversión en $2.000 x 12 dividido por $100.000 o 24%</p>
     </Panel>
     <Panel header={'RENDIMIENTO DEL EFECTIVO'} key="29">
-      <p>Retorno del efectivo. <a href=" ">Ver: Rendimiento de la inversión</a></p>
+      <p>Retorno del efectivo. <NavLink to="/Glosario"> ver: Rendimiento de la Inversión </NavLink> </p>
     </Panel>
+
+
+
     <Panel header={'SOCIEDAD DE RESPONSABILIDAD LIMITADA (SL): (Limited partnership)'} key="30">
       <p>Entidad legal constituida para mantener activos. Establece responsabilidad limitada
       a un grupo limitado de miembros</p>

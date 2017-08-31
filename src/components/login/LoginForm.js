@@ -62,7 +62,7 @@ class LoginForm extends Component{
                       <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
 
 
-                      <input type="submit" value="Iniciar sesión"/>
+                      <input type="submit" value="Iniciar sesión" className="aceptar"/>
                       <p>
                         <NavLink to="/signup">
                         <p>

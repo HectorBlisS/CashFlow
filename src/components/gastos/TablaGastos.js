@@ -10,12 +10,12 @@ class TablaGastos extends Component{
     }
     render(){
         const table = {
-            marginLeft: "20px",
-            marginRight: "20px"
-        }
+            margin: "20px",
+            maxHeight: "70vh"
+        };
         return(
             <div style={table}>
-                <Table dataSource={this.listaGastos}>
+                <Table pagination={{defaultPageSize:6}}  dataSource={this.listaGastos}>
                     <Column
                         title="Precio"
                         dataIndex="precio"

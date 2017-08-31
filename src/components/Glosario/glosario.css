@@ -1,10 +1,11 @@
 .Card {
 
-    padding-top: 02%;
+    padding-top: 03%;
     text-align: center;
     text-anchor: 50px;
     padding-left: 03%;
     padding-right: 03%;
+    position: relative;
 
 
 }
@@ -30,17 +31,31 @@ border: width 20% border-style color;
 
 
 .titulo h1{
-    padding-top: 03%;
-    padding-left: 05%;
+
     padding-block-end: 0%;
     color: #8F748D;
     font-size: 30px;
 
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
 .ant-card{
 
     font-size: 15px;
+    padding-block-start: 02%;
 }
 
 .ant-card-head-title{

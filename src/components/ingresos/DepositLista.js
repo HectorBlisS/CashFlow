@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
-import { Table, Badge, Menu, Dropdown, Icon } from 'antd';
+import { Table, Button} from 'antd';
+import DepositModal from './DepositModal';
 import './Deposit.css';
+import DepositModalEdit from "./DepositModalEdit";
 
 
 
 class DepositPage extends Component{
+
+
     render(){
+
         const expandedRowRender = () => {
             const columns = [
                 { title: 'Fecha', dataIndex: 'fecha', key: 'fecha' },
@@ -19,8 +24,9 @@ class DepositPage extends Component{
 
                     render: () => (
                         <span className={'table-operation'}>
-            <a href="#">Editar</a>
-            <a href="#">Eliminar</a>
+            <DepositModalEdit/>
+                            <br/>
+            <Button type="primary">Eliminar</Button>
           </span>
                     ),
                 },
@@ -37,11 +43,15 @@ class DepositPage extends Component{
                 });
             }
             return (
+
+
                 <Table
                     columns={columns}
                     dataSource={data}
                     pagination={false}
                 />
+
+
             );
         };
 
@@ -49,7 +59,7 @@ class DepositPage extends Component{
             { title: 'Tipo', dataIndex: 'tipo', key: 'tipo' },
             { title: 'Fecha', dataIndex: 'createdAt', key: 'createdAt' },
             { title: 'Total', dataIndex: 'total', key: 'total' },
-            { title: 'Acción', key: 'operation', render: () => <a href="#">Editar</a> },
+            { title: 'Acción', key: 'operation', render: () => <DepositModalEdit/>},
         ];
 
         const data = [];
@@ -64,13 +74,16 @@ class DepositPage extends Component{
 
         return(
 
-
+            <div>
             <Table
                 className="components-table-demo-nested"
                 columns={columns}
                 expandedRowRender={expandedRowRender}
                 dataSource={data}
             />
+               <DepositModal />
+            </div>
+
 
 
         );
