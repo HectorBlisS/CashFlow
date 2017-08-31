@@ -27,7 +27,7 @@ class Siguiente extends React.Component {
           </SubMenu>
           <SubMenu key="sub3" title={<span><Icon type="notification" />Resultados</span>}>
             <Menu.Item key="9">Progreso</Menu.Item>
-            <Menu.Item key="10">Meta</Menu.Item>
+      <Menu.Item key="10" ><NavLink to="/Meta"> Meta </NavLink></Menu.Item>
 
           </SubMenu>
         </Menu>

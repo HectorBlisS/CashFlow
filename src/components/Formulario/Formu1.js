@@ -3,12 +3,8 @@ import { Form, Input, Button, Radio, InputNumber,Card } from 'antd';
 import Nombre from './Nombre';
 import Edad from './Edad';
 import Sexo from './Sexo';
-import Iavatar from './Iavatar';
-<<<<<<< HEAD
 import Modal from './Modal';
-=======
 import Datos from './Datos';
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
 import './Form.css';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -19,12 +15,10 @@ const RadioGroup = Radio.Group;
 class Formu1 extends React.Component {
 
 
-<<<<<<< HEAD
+
   constructor() {
     super();
-    /*this.state = {
-      formLayout: 'horizontal',
-    };*/
+
     this.state = {
       value: 1,
     }
@@ -55,15 +49,6 @@ class Formu1 extends React.Component {
             height:"80vh",
             display:"block"
         };
-
-    /*const { formLayout } = this.state;
-    const formItemLayout = formLayout === 'horizontal' ? {
-      labelCol: { span: 4 },
-      wrapperCol: { span: 5 },
-    } : null;
-    const buttonItemLayout = formLayout === 'horizontal' ? {
-      wrapperCol: { span: 5, offset: 4 },
-    } : null;*/
 
 
     const formItemLayout = {
@@ -101,21 +86,13 @@ class Formu1 extends React.Component {
         <Card style={{ width: 10 }} style={{ background: '#ECECEC', padding: '50px', justifyContent: 'center' }}>
 
          <Form >
-=======
-  
-  render() {
 
-    
+       <div>
 
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
 
-    return (
-       <div>    
 
-       <div className="Fondos"> <Nombre/> </div> <div> <Datos/> 
-        {/* <br/><br/>   <br/> <Iavatar/> <br/>*/}
 
-<<<<<<< HEAD
+
           <FormItem
           {...formItemLayout}
           label="Profesión:">
@@ -195,71 +172,24 @@ class Formu1 extends React.Component {
           wrapperCol={{sm:{offset:10}}}>
         <Modal/>
           </FormItem>
+  </div>
+</Form>
+      </Card>
+
+</div>
 
 
 
-        </Form>
-
-
-        {/*<Form layout={formLayout} >
-
-
-          <FormItem
-            label="Nombre:"
-            {...formItemLayout}
-          >
-            <Input placeholder="Ingresa tu Nombre" />
-          </FormItem>
-
-
-          <FormItem
-            label="Apellido Paterno"
-            {...formItemLayout}
-          >
-
-          <Input placeholder="Ingresa tu apellido Paterno" />
-          </FormItem>
-          <FormItem
-            label="Apellido Materno"
-            {...formItemLayout}
-          >
-          <Input placeholder="Ingresa tu apellido Materno" />
-          </FormItem>
-
-          <Edad/> <br/>
-
-
-          <FormItem
-            label="Field D"
-            {...formItemLayout}
-          >
-            <Input placeholder="input placeholder" />
-          </FormItem>
-
-          <Sexo/> <br/> <br/>
-
-          <FormItem {...buttonItemLayout}>
-            <Button type="primary">Submit</Button>
-          </FormItem>
-        </Form> */} </Card>
-      </div>
 
 
 
-=======
-        <div className="Form">  
-           
-         <div className="Cardf"> 
-         
-         
-       </div> </div> </div> </div>
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
+
+
+
+
+
     );
   }
 }
 
 export default Formu1;
-<<<<<<< HEAD
-=======
-
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601

@@ -15,13 +15,12 @@ import Formu1 from './components/Formulario/Formu1';
 import GlosarioHome from './components/Glosario/GlosarioHome';
 import DepositPage from './components/ingresos/DepositPage';
 import HomeMeta from './components/Results/HomeMeta';
-<<<<<<< HEAD
 import Siguiente from './components/principal/Siguiente';
-import Inicia from './components/Tuinicio/Inicia';
-=======
+import Meta from './components/Results/MetaPage';
+
+
 import DatosLista from './components/Formulario/DatosLista';
 
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
 
 
 
@@ -40,16 +39,15 @@ const Routes = () => (
         <Route path="/Datosperfil" component={Formu1}/>
         <Route path="/Glosario" component={GlosarioHome}/>
         <Route path="/HomeMeta" component={HomeMeta}/>
-<<<<<<< HEAD
+        <Route path="/Meta" component={Meta}/>
+
         <Route path="/Formu1" component={Formu1}/>
         <Route path="/Sigui" component={Siguiente}/>
         <Route path="/Deposit" component={DepositPage}/>
-          <Route path="/Inicia" component={Inicia}/>
-=======
-        <Route path="/Deposit" component={DepositPage}/>
+
         <Route path="/lista" component={DatosLista} />
-        
->>>>>>> c2709f1632b09b62cb764965dd2ac43656d41601
+
+
 
 
     </Switch>

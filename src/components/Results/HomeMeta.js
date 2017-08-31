@@ -15,7 +15,7 @@ class HomeMeta extends React.Component {
 
 <section  style={{ width:'245px' ,  float:'left' }} > <Siguiente/> </section>
 
-<div style={{ width:'300px' ,  float:'left',   }} > <Meta/>  </div>
+
 
 </div>
 

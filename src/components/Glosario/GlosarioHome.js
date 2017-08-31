@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import { Card } from 'antd';
+import {Link, NavLink} from 'react-router-dom';
 import Buscador from './Buscador';
 import Abc from './Abc';
 import { Icon, Button, Input, AutoComplete } from 'antd';
 import { Collapse } from 'antd';
 import './glosario.css';
 const Panel = Collapse.Panel;
+
 
 
 const Option = AutoComplete.Option;
