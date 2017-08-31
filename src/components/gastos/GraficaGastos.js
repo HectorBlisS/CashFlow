@@ -23,7 +23,7 @@ class GraficaGastos extends Component{
                 color: "#FDB45C",
                 highlight: "#FFC870",
                 label: "Servicios $"
-            }
+            },
         ];
 
         const options = {
@@ -40,13 +40,20 @@ class GraficaGastos extends Component{
             maintainAspectRatio: true,
             showScale: true,
             animateScale: true,
-            widht: "100%",
-            height: "100%",
+            width: "80vw",
+            height: "80vh",
             legend: {
-                display: true
+                visible: true,
+                labels: {
+                }
             },
             tooltips: {
                 enabled: true
+            },
+            title: {
+                display:true,
+                text: 'Grafica de gastos',
+                fontSize: 30
             }
         };
 
@@ -72,7 +79,7 @@ class GraficaGastos extends Component{
 
         return(
             <div >
-                <Doughnut id="grafica1" name="grafica1" options={options} style={doughnutStyle} data={data} widht="100" height="100"  />
+                <Doughnut id="grafica1" name="grafica1" options={options} style={doughnutStyle} data={this.props.dataGraficaGastos}   />
             </div>
         );
     }

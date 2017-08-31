@@ -23,7 +23,8 @@ class GastosPage extends Component{
             userId: '',
             listaGastos: [],
             dateRama: dateRam,
-            categoriaLista: []
+            categoriaLista: [],
+            dataGraficaGastos: []
         };
         this.recuperarCategorias();
 
@@ -42,10 +43,68 @@ class GastosPage extends Component{
     }
 
     generarDatosGrafica = () => {
-        var listCounter = [];
+        var claveValor = [];
         this.state.categoriaLista.forEach( (categoria) => {
-            console.log('Categoria' + categoria);
+            var cantidad = 0.0;
+            this.state.listaGastos.forEach((gasto) => {
+                if( categoria === gasto.categoria){
+                    cantidad += parseFloat(gasto.precio);
+                }
+            });
+            claveValor.push({categoria: categoria, cantidad: cantidad})
         });
+        console.log(claveValor);
+        var dataGraficaGastos = [];
+
+
+        var i = 0;
+        claveValor.forEach( (cv) => {
+            var paletaColores = [
+              '#A3B50B',
+              '#7A8233',
+              '#6181EB',
+              '#E8C726',
+              '#005AB5',
+              '#46B56B',
+              '#33824E',
+              '#CC61EB',
+              '#5DE826',
+              '#1DCBF5',
+              '#5B00B5'
+            ];
+            //var number = Math.floor(4719190 + Math.random() * 12269014 );
+            //var colorPrimary = this.generarColorPrimario(number);
+            var colorPrimary = '';
+            colorPrimary = paletaColores[i];
+            i += 1;
+            //var colorSecondary = this.generarColorSecundario(number);
+            dataGraficaGastos.push({
+                value: cv.cantidad,
+                color: colorPrimary,
+                highlight: colorPrimary,
+                label: cv.categoria
+            });
+        });
+        let dataGraficaGasto = this.state.dataGraficaGastos;
+        dataGraficaGasto = dataGraficaGastos;
+        this.setState({dataGraficaGastos:dataGraficaGasto});
+    }
+
+    generarColorPrimario = (number) => {
+        var hexString = this.decimalToHexadecimal(number);
+        return hexString;
+    }
+
+    generarColorSecundario = (number) => {
+        number -= parseInt(number) - 81414;
+        var hexString = this.decimalToHexadecimal(number);
+        return hexString;
+    }
+
+    decimalToHexadecimal = (number) =>{
+        var hexString = number.toString(16);
+        hexString = hexString.toUpperCase();
+        return hexString;
     }
 
     recuperarCategorias = () => {
@@ -59,7 +118,6 @@ class GastosPage extends Component{
                         categoriaLista.push(r.val()[key].value);
                     }
                     this.setState({categoriaLista});
-                    this.generarDatosGrafica();
                 }
             ).catch(
             (error) => {
@@ -77,9 +135,11 @@ class GastosPage extends Component{
                     listaGastos.push(r.val()[key]);
                 }
                 this.setState({listaGastos});
+                this.generarDatosGrafica();
                 //console.log(this.state.listaGastos[0].descripcion);
         }).catch( (e) => {
             toast.error("No lo pude cargar" );
+            toast.error(e.message);
         });
     }
     render(){
@@ -94,13 +154,15 @@ class GastosPage extends Component{
             width: "100vw"
         };
 
+        const {dataGraficaGastos} = this.state;
+
         return(
             <div>
                 <Row>
                     <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                         <div style={padre}>
                             <div style={hijo}>
-                                <GraficaGastos/>
+                                <GraficaGastos dataGraficaGastos={dataGraficaGastos}/>
                             </div>
 
                         </div>

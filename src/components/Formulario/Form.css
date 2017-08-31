@@ -1,14 +1,16 @@
 .Nombre{
-padding-top: 05%;
+padding-top: 02%;
+padding-block-end: 01%;
     
-    background-color: peru;
+   
     color: paleturquoise;
    
     padding-left: 35%;
     padding-block-end: 03%;
     display: block;
-
 }
+
+
 
 
 .Nombre h1{
@@ -16,11 +18,25 @@ padding-top: 03%;
 
     color: paleturquoise;
 
-
 }
 
-.element.style h1{
-    color: peru;
+.Fondos{
+
+    size:10%;
+    padding-block-end: 03%;
+    background-color: #000000;
+    margin: 0 auto;
+    border: 1px solid #bebde9;
+    position: relative;
+    
+    border: 2px solid rgb(0,0,005); opacity: 0.9;
+    
+   
+}
+
+.Card{
+
+    border: 3px solid paleturquoise;
 }
 
 
@@ -36,13 +52,41 @@ padding-top: 03%;
 }
 
 .Form{
-    padding-left: 03%;
-    padding-right: 03%;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-block-end: 02%;
+   position: absolute;
+    
+    top: 27%;
+    right: 5%;
+    left: 5%;
+    
+    
+    
 }
 
 .Form form{
 
     width: 50%;
     margin: 0 auto;
+    
+    border-radius: 25px;
+    
+    
+}
+
+.Button{
+    background-color: white;
+
+border: 2px solid #afcde3;
+border-color: #afcde3 ;
+color: #3498DB;
+
+ box-sizing: border-box;
+ transition: all 500ms ease;
+
+ 
+
+
 }
 

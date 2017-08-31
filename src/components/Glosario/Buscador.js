@@ -55,7 +55,9 @@ class Buscador extends React.Component {
   render() {
     const { dataSource } = this.state;
     return (
+      
       <div className="global-search-wrapper" style={{ width: 300 }}>
+        
         <AutoComplete
           className="global-search"
           size="large"
@@ -67,9 +69,11 @@ class Buscador extends React.Component {
           optionLabelProp="text"
         >
 
+
         <Input suffix={<Icon type="search" className="certain-category-icon" />} />
       </AutoComplete>
     </div>
+    
   );
   }
 }

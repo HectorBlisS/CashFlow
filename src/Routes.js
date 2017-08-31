@@ -17,6 +17,8 @@ import GlosarioHome from './components/Glosario/GlosarioHome';
 import DepositPage from './components/ingresos/DepositPage';
 import HomeMeta from './components/Results/HomeMeta';
 import Carru from './components/principal/Carru';
+import DatosLista from './components/Formulario/DatosLista';
+
 
 
 
@@ -32,13 +34,15 @@ const Routes = () => (
         <Route path="/perfil" component={Perfil}/>
         <Route path="/registro" component={Registro}/>
         <Route path="/signup" component={SignUpPage}/>
-        <Route path="/lol" component={Formu1}/>
+        <Route path="/Datosperfil" component={Formu1}/>
         <Route path="/Glosario" component={GlosarioHome}/>
         <Route path="/HomeMeta" component={HomeMeta}/>
           <Route path="/Carru" component={Carru}/>
       
         <Route path="/Carru" component={Carru}/>
         <Route path="/Deposit" component={DepositPage}/>
+        <Route path="/lista" component={DatosLista} />
+        
 
 
     </Switch>

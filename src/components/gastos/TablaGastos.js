@@ -15,7 +15,7 @@ class TablaGastos extends Component{
         };
         return(
             <div style={table}>
-                <Table dataSource={this.listaGastos}>
+                <Table pagination={{defaultPageSize:6}}  dataSource={this.listaGastos}>
                     <Column
                         title="Precio"
                         dataIndex="precio"
