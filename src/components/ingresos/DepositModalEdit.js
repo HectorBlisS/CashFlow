@@ -57,7 +57,7 @@ class DepositModalEdit extends Component {
 
                     <label htmlFor="descrip">Descripción</label>
                     <br/>
-                    <textarea type="text" autosize={{ minRows: 2, maxRows: 6 }}/>
+                    <input type="text" autosize={{ minRows: 2, maxRows: 6 }}/>
 
                     <br/>
 
