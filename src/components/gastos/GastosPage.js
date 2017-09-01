@@ -157,7 +157,8 @@ class GastosPage extends Component{
             width: "100vw"
         };
 
-        const {dataGraficaGastos} = this.state;
+        const {dataGraficaGastos, listaGastos} = this.state;
+        var medida = listaGastos.length > 0 ? 10 : 20 ;
 
         return(
             <div>
@@ -165,6 +166,7 @@ class GastosPage extends Component{
                     <Col xs={24} sm={24} md={4} lg={4} xl={4}>
                         <section> <Navegacion/> </section>
                     </Col>
+                    {listaGastos.length > 0 &&
                     <Col xs={24} sm={24} md={10} lg={10} xl={10}>
                         <div style={padre}>
                             <div style={hijo}>
@@ -173,7 +175,8 @@ class GastosPage extends Component{
 
                         </div>
                     </Col>
-                    <Col xs={24} sm={24} md={10} lg={10} xl={10}>
+                    }
+                    <Col xs={24} sm={24} md={medida} lg={medida} xl={medida}>
                         <div>
                             <TablaGastos datos={this.state.listaGastos} />
                             <NavLink to="/gastos/addGasto" >
