@@ -8,7 +8,7 @@ class SignUpForm extends Component{
           nombres: '',
           apellidos:'',
             email: '',
-            password: ''
+            password: '',
         }
     }
 

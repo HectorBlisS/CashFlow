@@ -1,9 +1,27 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'antd';
+import toastr from 'toastr';
+import firebase from '../../firebase';
 import DepositLista from './DepositLista';
 import Navegacion from '../principal/Siguiente'
 
 class DepositPage extends Component{
+    constructor(props){
+        super(props);
+        this.state={user:''};
+        firebase.auth()
+            .onAuthStateChanged(user=> {
+                if(user){
+                    this.setState({
+                        user:user
+                    });
+                }else{
+                    toastr.error("Debe iniciar sesión");
+                    this.props.history.push('/loginpage');
+                }
+            });
+
+    }
     render(){
 
         const rowStyle = {
@@ -28,5 +46,6 @@ class DepositPage extends Component{
         );
 
     }
+
 }
 export default DepositPage;

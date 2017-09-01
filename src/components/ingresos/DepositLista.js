@@ -77,16 +77,14 @@ class DepositPage extends Component{
         return(
 
             <div>
-
-                    <Table
+                <Table
                 className="components-table-demo-nested"
                 columns={columns}
                 expandedRowRender={expandedRowRender}
                 dataSource={data}
+                />
 
-            />
-
-                    <DepositModal />
+                <DepositModal />
 
             </div>
 
