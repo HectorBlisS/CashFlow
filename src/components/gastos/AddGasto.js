@@ -6,6 +6,7 @@ import firebase from '../../firebase';
 import toastr from 'toastr';
 import {Row, Col} from 'antd';
 import {Prompt} from 'react-router-dom';
+import './Gastos.css';
 
 
 
@@ -177,8 +178,8 @@ class AddGasto extends Component{
             display:"flex",
             justifyContent:"center",
             alignItems:"center",
-            width:"100%",
-            height:"100%",
+            width:"95vw",
+            height:"85vh",
 
         };
 
@@ -210,6 +211,9 @@ class AddGasto extends Component{
                                 handleChange={this.handleChange}
                                 etiqueta="Cantidad gastada"
                                 required="required"
+                                min = "0"
+                                max = "10000"
+                                maxLength = "5"
                             />
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12} style={rowStyle} >
@@ -230,7 +234,9 @@ class AddGasto extends Component{
                                 tipo="text"
                                 nombre="descripcion"
                                 handleChange={this.handleChange}
-                                etiqueta="Descripción"/>
+                                etiqueta="Descripción"
+                                className="gastosText"
+                            />
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12} style={rowStyle} >
                             <DropDownList
@@ -258,10 +264,10 @@ class AddGasto extends Component{
                     </Row>
                     <Row>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12} style={rowStyle}>
-                            <button className="cancelar" onClick={this.cancelarTransaccion}>Cancelar</button>
+                            <button className="cancelarGasto" onClick={this.cancelarTransaccion}>Cancelar</button>
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12} style={rowStyle}>
-                            <input className="aceptar" type="submit" label="Submit"/>
+                            <input className="aceptarGasto" type="submit" label="Submit"/>
                         </Col>
                     </Row>
                 </form>

@@ -32,29 +32,29 @@ class SignUpForm extends Component{
         const {usuario} = this.state;
         return(
             <div className="center">
-                <form onSubmit={this.showUserPass} className="signup-form">
+                <form onSubmit={this.showUserPass} className="login-form">
 
                   <label htmlFor="name">Nombre</label>
-                  <input type="text" id="name " name="names" placeholder="Nombre" onChange={this.handleChange}/>
+                  <input className="textPersonalizado" type="text" id="name " name="names" placeholder="Nombre" onChange={this.handleChange}/>
 
                   <label htmlFor="apellido">Apellidos</label>
-                  <input type="text" id="apelli " name="apellido" placeholder="Apellidos" onChange={this.handleChange}/>
+                  <input className="textPersonalizado" type="text" id="apelli " name="apellido" placeholder="Apellidos" onChange={this.handleChange}/>
 
 
 
                     <label htmlFor="email">Correo</label>
-                    <input value={usuario.correo} type="text" id="email" name="email" placeholder="Correo electrónico" onChange={this.handleChange}/>
+                    <input value={usuario.correo} className="emailLogin" type="email" id="email" name="email" placeholder="Correo electrónico" onChange={this.handleChange}/>
 
                     <label htmlFor="pass">Contraseña</label>
                     <input value={usuario.password} type="password" id="pass " name="password" placeholder="Contraseña" onChange={this.handleChange}/>
 
 
 
-                    <input type="submit" value="Registarse"/>
+                    <input type="submit" value="Registarse" className="aceptarGasto"/>
 
                 </form>
             </div>
-    );
+        );
     }
 }
 
