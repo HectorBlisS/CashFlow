@@ -4,7 +4,7 @@ import './glosario.css';
 const Option = AutoComplete.Option;
 const OptGroup = AutoComplete.OptGroup;
 
-<div className="Buscador"> </div>
+<div className="busca"> </div>
 
 
 function onSelect(value) {
@@ -55,9 +55,9 @@ class Buscador extends React.Component {
   render() {
     const { dataSource } = this.state;
     return (
-      
+
       <div className="global-search-wrapper" style={{ width: 300 }}>
-        
+
         <AutoComplete
           className="global-search"
           size="large"
@@ -73,7 +73,7 @@ class Buscador extends React.Component {
         <Input suffix={<Icon type="search" className="certain-category-icon" />} />
       </AutoComplete>
     </div>
-    
+
   );
   }
 }

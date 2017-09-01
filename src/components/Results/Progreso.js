@@ -1,5 +1,6 @@
 import React from 'react';
 import { Progress } from 'antd';
+import './Progre.css';
 
 
 
@@ -9,10 +10,10 @@ class Progreso extends React.Component {
 
     render (){
         return (
-          <div>
+          <div className= "pro">
 
 
-            <div>
+            <div  >
               <h2>El progreso de tu meta es: </h2>
 
             </div>
