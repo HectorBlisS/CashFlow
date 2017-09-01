@@ -4,17 +4,14 @@ import './princi.css';
 import Routes from '../../Routes';
 import {Link, NavLink} from 'react-router-dom';
 
-
 import {  Menu} from 'antd';
 import firebase from '../../firebase';
+
 class NavP extends React.Component {
-
-
-
     render (){
         return (
 <div>
-<div>
+<div className = "navp">
   <NavLink to="/"> <img src={require ('./imagen/logo.png')}
       className="logo" />   </NavLink>
 

@@ -16,6 +16,8 @@ import DepositPage from './components/ingresos/DepositPage';
 import HomeMeta from './components/Results/HomeMeta';
 import Siguiente from './components/principal/Siguiente';
 import Meta from './components/Results/MetaPage';
+import Activos from './components/Results/ActivPage';
+import Progreso from './components/Results/ProPage';
 
 
 import DatosLista from './components/Formulario/DatosLista';
@@ -39,7 +41,8 @@ const Routes = () => (
         <Route path="/Glosario" component={GlosarioHome}/>
         <Route path="/HomeMeta" component={HomeMeta}/>
         <Route path="/Meta" component={Meta}/>
-
+        <Route path="/Activos" component={Activos}/>
+        <Route path="/Progreso" component={Progreso}/>
         <Route path="/Formu1" component={Formu1}/>
         <Route path="/Sigui" component={Siguiente}/>
         <Route path="/Deposit" component={DepositPage}/>

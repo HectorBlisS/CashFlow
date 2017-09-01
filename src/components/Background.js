@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Row, Col} from 'antd';
 import elvideo  from './principal/imagen/video.mp4';
 import Animacion from  './Animacion';
 import  '../App.css' ;
