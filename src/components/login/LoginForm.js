@@ -45,12 +45,12 @@ class LoginForm extends Component{
             return (
               <div style={center}>
                   <form onSubmit={this.handleSubmit} className="login-form" >
-                      <div style={{textAlign:"center"}}>
-                          <h3>Inicia con : </h3>
+                      <div style={{textAlign:"center", color:'white'}}>
+                          <h3 style={{color:'white'}}>Inicia con : </h3>
                           <SocialIcon className="icon" network="facebook" onClick={socialLogin} />
                           <SocialIcon className="icon" network="twitter" onClick={twitterLogin}/>
                           <SocialIcon className="icon" network="google" onClick={googleLogin} />
-                          <h3>o</h3>
+                          <h3 style={{color:'white'}}>o</h3>
                       </div>
 
 
@@ -64,7 +64,7 @@ class LoginForm extends Component{
 
                       <input type="submit" value="Iniciar sesión" className="aceptarGasto"/>
                       <p>
-                         <NavLink style={{color:"#9500C3"}} to="/signup">
+                         <NavLink style={{color:"white",textDecoration: 'underline'}} to="/signup">
                             <p>
                              Registrarse
                             </p>
