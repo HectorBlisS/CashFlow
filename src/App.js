@@ -8,34 +8,25 @@ import {Link, NavLink} from 'react-router-dom';
 
 
 class App extends Component {
-
-  render() {
-    return (
-
-      <div>
-
-<NavP/>
-
-      <div >
-
-      <div className="App">
-        <NavLink to="/ingresos">
-          <h1>
-           
-          </h1> 
-        </NavLink>
-
-        <Routes/>
-            </div>  </div> 
-
-
-
-
-    </div>
-
-
-    );
-  }
+    render() {
+        const IMAGEN = require(`./img/finances.jpg`);
+        var fondo = {
+            backgroundImage: `url(${IMAGEN})`,
+            width: '100vw',
+            height: '100vh',
+            backgroundSize: 'cover',
+        };
+        return (
+            <div>
+                <NavP/>
+                <div >
+                    <div className="App" style={fondo}>
+                        <Routes/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
