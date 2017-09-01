@@ -29,7 +29,7 @@ class GlosarioHome extends Component{
         return(
 
 <div>
-            <div>
+            <div className= "busca">
                 <Buscador/>
 
               </div>

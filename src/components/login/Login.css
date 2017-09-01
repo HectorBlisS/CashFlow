@@ -37,17 +37,20 @@
     position: relative;
 }
 .nav h1 {
+
 color: black;
 padding-left: 45%;
 
 }
 
 .nombre {
+  background-color: #ffff;
   padding-left: 5%;
 
 }
 
 .boton{
+    background-color: #ffff;
   padding-left: 90%;
 
 color: black;
