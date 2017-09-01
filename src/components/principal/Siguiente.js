@@ -21,12 +21,12 @@ class Siguiente extends React.Component {
 
           </SubMenu>
           <SubMenu key="sub2" title={<span><Icon type="calculator" />Flujo</span>}>
-            <Menu.Item key="5">Activos</Menu.Item>
-            <Menu.Item key="6">Pasivos</Menu.Item>
+            <Menu.Item key="5"> <NavLink to="/Activos"> Activos y pasivos </NavLink></Menu.Item>
+
 
           </SubMenu>
           <SubMenu key="sub3" title={<span><Icon type="notification" />Resultados</span>}>
-            <Menu.Item key="9">Progreso</Menu.Item>
+            <Menu.Item key="9">  <NavLink to="/Progreso"> Progreso </NavLink></Menu.Item>
       <Menu.Item key="10" ><NavLink to="/Meta"> Meta </NavLink></Menu.Item>
 
           </SubMenu>
