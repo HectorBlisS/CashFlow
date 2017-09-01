@@ -64,7 +64,7 @@ class LoginForm extends Component{
 
                       <input type="submit" value="Iniciar sesión" className="aceptarGasto"/>
                       <p>
-                         <NavLink to="/signup">
+                         <NavLink style={{color:"#9500C3"}} to="/signup">
                             <p>
                              Registrarse
                             </p>
