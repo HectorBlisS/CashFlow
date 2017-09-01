@@ -28,7 +28,8 @@ import './Login.css';
                 user:user
             });
         }else{
-            this.props.history.push('/login');
+            toastr.error("Debe iniciar sesión");
+            this.props.history.push('/loginpage');
         }
     });
 
