@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import { Button, Modal, Form, Input, Radio } from 'antd';
 
 class DepositModal extends Component {
+
     state = {
-        ModalText: 'Hola pinche putita',
+        ModalText: '',
         visible: false,
     }
     showModal = () => {
@@ -57,7 +58,7 @@ class DepositModal extends Component {
 
                     <label htmlFor="descrip">Descripción</label>
                     <br/>
-                    <textarea type="text" autosize={{ minRows: 2, maxRows: 6 }}/>
+                    <input type="text" autosize={{ minRows: 2, maxRows: 6 }}/>
 
                     <br/>
 

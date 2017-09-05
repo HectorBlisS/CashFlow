@@ -4,16 +4,16 @@ import toastr from 'toastr';
 
 class SignUpForm extends Component{
     state = {
-        usuario:{
-          nombres: '',
-          apellidos:'',
+        usuario: {
+            nombres: '',
+            apellidos: '',
             email: '',
+
             password: ''
         },
         match: true,
         passwordMatch: ''
     }
-
     handleChange = (e) => {
         var nombre = e.target.name;
         var valor = e.target.value;
