@@ -9,6 +9,9 @@ import  '../App.css' ;
 class Background extends Component{
 
           render() {
+          	const fuente = {
+          		fontFamily: 'Helvetica Neue",Helvetica,Arial,sans-serif'
+            };
             return (
                   <div>
                   <div  className = "video">
@@ -20,7 +23,7 @@ class Background extends Component{
                 <div className= "vi">
 
                 <img src={require ('../components/principal/imagen/logo.png')} className="logodos" />
-                  <h1> Bienvenidos </h1>
+                  <h1 style={fuente}> Bienvenidos </h1>
 
 
 

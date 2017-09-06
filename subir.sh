@@ -1,5 +1,11 @@
-#script bash
+#!/bin/bash
 
-git add .
-git commit $1
-git push -u origin master
+if [ -n "$1" ];
+then
+  git add .
+  git commit -m $1
+  git push -u origin master
+else
+  echo "Debes dar un mensaje"
+fi
+
