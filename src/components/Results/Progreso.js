@@ -9,20 +9,31 @@ class Progreso extends React.Component {
 
 
     render (){
+        const inblock = {
+        	display: 'block',
+	        width: '70%'
+        };
+
+        const progressiveStyle = {
+        	margin: '10px',
+	        height: '30px'
+        };
         return (
-          <div className= "pro">
+          <div className= "App-flex">
 
 
-            <div  >
+            <div style={inblock} >
               <h2>El progreso de tu meta es: </h2>
 
+
+              <Progress percent={30} style={progressiveStyle} />
+              <Progress percent={50} status="active" style={progressiveStyle} />
+              <Progress percent={70} status="exception" style={progressiveStyle}/>
+              <Progress percent={100} style={progressiveStyle}/>
+              <Progress percent={50} showInfo={false} style={progressiveStyle}/>
             </div>
-              <Progress percent={30} />
-              <Progress percent={50} status="active" />
-              <Progress percent={70} status="exception" />
-              <Progress percent={100} />
-              <Progress percent={50} showInfo={false} />
-            </div>
+          </div>
+
 
 
 
