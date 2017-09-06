@@ -78,10 +78,11 @@ class DepositPage extends Component{
 
             <div>
                 <Table
-                className="components-table-demo-nested"
-                columns={columns}
-                expandedRowRender={expandedRowRender}
-                dataSource={data}
+                    style={{margin:'20px'}}
+                    className="components-table-demo-nested"
+                    columns={columns}
+                    expandedRowRender={expandedRowRender}
+                    dataSource={data}
                 />
 
                 <DepositModal />
